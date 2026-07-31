@@ -178,6 +178,8 @@ Sin API key (funcionan apenas clonás el repo):
 - **Caltrans** — cámaras de California, por distrito
 - **NYC DOT** — cámaras de tránsito de Nueva York
 - **TfL JamCams** — Londres
+- **Transport for NSW** — cámaras de tránsito de Nueva Gales del Sur, Australia
+- **Waka Kotahi NZTA** — cámaras de rutas de Nueva Zelanda
 
 Con API key gratuita (agregalas como *repository secrets* para ampliar la
 cobertura):

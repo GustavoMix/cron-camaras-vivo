@@ -8,10 +8,10 @@ from __future__ import annotations
 
 import os
 
-from . import caltrans, castlerock, nyctmc, qldtraffic, tfl, windy, wsdot
+from . import caltrans, castlerock, nsw_traffic, nyctmc, nzta, qldtraffic, tfl, windy, wsdot
 from .base import Source, SourceResult
 
-_MODULES = (castlerock, caltrans, nyctmc, tfl, windy, wsdot, qldtraffic)
+_MODULES = (castlerock, caltrans, nyctmc, tfl, windy, wsdot, qldtraffic, nsw_traffic, nzta)
 
 __all__ = ["Source", "SourceResult", "all_sources", "select_sources"]
 
