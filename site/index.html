@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f6feb'/%3E%3Ccircle cx='8' cy='8' r='3.2' fill='none' stroke='white' stroke-width='1.6'/%3E%3Ccircle cx='8' cy='8' r='1' fill='white'/%3E%3C/svg%3E">
+<title>Cámaras en vivo · índice público</title>
+<meta name="description" content="Índice semanal de cámaras públicas en vivo, en JSON.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --panel: #f6f7f9;
+    --border: #e2e5ea;
+    --text: #16181d;
+    --muted: #5c6370;
+    --accent: #1f6feb;
+    --ok: #1a7f37;
+    --bad: #cf222e;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #2a313c;
+      --text: #e6edf3; --muted: #9198a1; --accent: #4493f8;
+      --ok: #3fb950; --bad: #f85149;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 .35rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 2.5rem 0 .85rem; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 2rem; max-width: 60ch; }
+  a { color: var(--accent); }
+
+  .stats { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .stat {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: .9rem 1rem;
+  }
+  .stat b { display: block; font-size: 1.6rem; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+
+  pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  pre {
+    background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 1rem; overflow-x: auto; font-size: .85rem;
+  }
+  code { font-size: .875em; }
+  .endpoints { display: grid; gap: .5rem; }
+  .endpoint {
+    display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: baseline;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: .7rem .9rem;
+  }
+  .endpoint a { font-family: ui-monospace, monospace; font-size: .85rem; word-break: break-all; }
+  .endpoint em { color: var(--muted); font-style: normal; font-size: .85rem; }
+
+  .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+  table { border-collapse: collapse; width: 100%; font-size: .875rem; }
+  th, td { padding: .55rem .8rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { background: var(--panel); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .ok { color: var(--ok); } .bad { color: var(--bad); }
+
+  input[type=search] {
+    width: 100%; padding: .7rem .9rem; font-size: 1rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--bg); color: var(--text);
+  }
+  .grid { display: grid; gap: .9rem; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); margin-top: 1rem; }
+  .card {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; background: var(--panel);
+    text-decoration: none; color: inherit; display: block;
+    transition: border-color .12s ease;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: var(--border); }
+  .card .meta { padding: .55rem .7rem; }
+  .card .meta strong { display: block; font-size: .82rem; font-weight: 600; }
+  .card .meta span { color: var(--muted); font-size: .75rem; }
+  .note { color: var(--muted); font-size: .85rem; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Cámaras en vivo · índice público</h1>
+  <p class="lede">
+    Índice semanal de cámaras que organismos de tránsito y plataformas públicas
+    publican deliberadamente para consumo abierto. Se sirve como JSON estático,
+    listo para consumir desde cualquier app.
+  </p>
+
+  <div class="stats" id="stats"></div>
+
+  <h2>Endpoints</h2>
+  <div class="endpoints" id="endpoints"></div>
+  <p class="note">
+    Todos los archivos se sirven con <code>Access-Control-Allow-Origin: *</code>
+    y soportan <code>ETag</code>/<code>If-None-Match</code>, así que conviene
+    cachear del lado del cliente.
+  </p>
+
+  <h2>Fuentes</h2>
+  <div class="table-scroll"><table id="sources">
+    <thead><tr><th>ID</th><th>Estado</th><th class="num">Cámaras</th><th class="num">Tiempo</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+
+  <h2>Explorar</h2>
+  <input type="search" id="q" placeholder="Buscar por nombre, ciudad, país o fuente…" autocomplete="off">
+  <p class="note" id="search-status">Cargando cámaras…</p>
+  <div class="grid" id="results"></div>
+
+  <footer>
+    Datos de cada organismo publicador; ver <code>attribution</code> y
+    <code>license</code> en cada registro.
+    Este proyecto sólo indexa transmisiones publicadas de forma abierta.
+    <a href="https://github.com/GustavoMix/cron-camaras-vivo">Código fuente</a>.
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  const MAX_RESULTS = 60;
+  const el = (id) => document.getElementById(id);
+  const fmt = (n) => Number(n || 0).toLocaleString("es-AR");
+
+  // Escape before injecting any upstream string: names come from third-party
+  // feeds and must never be treated as markup.
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+
+  let cameras = [];
+
+  async function load() {
+    let index;
+    try {
+      index = await (await fetch("v1/index.json")).json();
+    } catch {
+      el("stats").innerHTML =
+        '<p class="note">Todavía no hay datos publicados. Corré el workflow ' +
+        '<code>Update camera index</code> para generar el primer dataset.</p>';
+      el("search-status").textContent = "";
+      return;
+    }
+
+    renderStats(index);
+    renderEndpoints(index);
+    renderSources(index.sources || []);
+    await loadCameras();
+  }
+
+  function renderStats(index) {
+    const generated = index.generated_at
+      ? new Date(index.generated_at).toLocaleString("es-AR", { dateStyle: "medium", timeStyle: "short" })
+      : "—";
+    const countries = Object.keys(index.countries || {}).length;
+    const stats = [
+      [fmt(index.count), "cámaras"],
+      [fmt(countries), "países"],
+      [fmt(index.stats?.with_stream), "con video en vivo"],
+      [generated, "actualizado"],
+    ];
+    el("stats").innerHTML = stats
+      .map(([value, label]) => `<div class="stat"><b>${esc(value)}</b><span>${esc(label)}</span></div>`)
+      .join("");
+  }
+
+  function renderEndpoints(index) {
+    const top = Object.entries(index.countries || {}).sort((a, b) => b[1] - a[1])[0];
+    const rows = [
+      ["v1/index.json", "Metadatos, conteos y salud de las fuentes"],
+      ["v1/cameras.json", `Todas las cámaras (${fmt(index.count)})`],
+      ["v1/sources.json", "Catálogo de fuentes con licencia y atribución"],
+    ];
+    if (top) rows.push([`v1/countries/${top[0]}.json`, `Sólo ${top[0]} (${fmt(top[1])}) — un archivo por país`]);
+
+    el("endpoints").innerHTML = rows
+      .map(([path, desc]) => `<div class="endpoint"><a href="${esc(path)}">${esc(path)}</a><em>${esc(desc)}</em></div>`)
+      .join("");
+  }
+
+  function renderSources(sources) {
+    el("sources").querySelector("tbody").innerHTML = sources
+      .slice()
+      .sort((a, b) => (b.cameras || 0) - (a.cameras || 0))
+      .map((s) => `<tr>
+        <td><code>${esc(s.id)}</code></td>
+        <td class="${s.ok ? "ok" : "bad"}">${s.ok ? "ok" : "falló"}</td>
+        <td class="num">${fmt(s.cameras)}</td>
+        <td class="num">${esc((s.duration_s ?? 0).toFixed(1))}s</td>
+      </tr>`)
+      .join("");
+  }
+
+  async function loadCameras() {
+    try {
+      const payload = await (await fetch("v1/cameras.json")).json();
+      cameras = payload.cameras || [];
+    } catch {
+      el("search-status").textContent = "No se pudo cargar el listado de cámaras.";
+      return;
+    }
+    search("");
+  }
+
+  function search(query) {
+    const needle = query.trim().toLowerCase();
+    const matches = needle
+      ? cameras.filter((c) =>
+          `${c.name} ${c.city || ""} ${c.region || ""} ${c.country || ""} ${c.source}`
+            .toLowerCase()
+            .includes(needle))
+      : cameras;
+
+    const shown = matches.slice(0, MAX_RESULTS);
+    el("search-status").textContent = needle
+      ? `${fmt(matches.length)} resultados${matches.length > shown.length ? ` (mostrando ${shown.length})` : ""}`
+      : `Mostrando ${shown.length} de ${fmt(cameras.length)}. Escribí para filtrar.`;
+
+    // Snapshot URLs are frequently rate-limited; loading lazily keeps the page
+    // usable even when a publisher is slow.
+    el("results").innerHTML = shown
+      .map((c) => {
+        const where = [c.city, c.region, c.country].filter(Boolean).join(", ");
+        const src = c.image || "";
+        const img = src
+          ? `<img loading="lazy" src="${esc(src)}" alt="" onerror="this.style.visibility='hidden'">`
+          : `<img alt="" style="visibility:hidden">`;
+        const link = c.stream || c.image || "#";
+        return `<a class="card" href="${esc(link)}" target="_blank" rel="noopener noreferrer">
+          ${img}
+          <div class="meta"><strong>${esc(c.name)}</strong><span>${esc(where || c.source)}</span></div>
+        </a>`;
+      })
+      .join("");
+  }
+
+  let timer;
+  el("q").addEventListener("input", (event) => {
+    clearTimeout(timer);
+    const value = event.target.value;
+    timer = setTimeout(() => search(value), 150);
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+name: Update camera index
+
+on:
+  schedule:
+    # Mondays at 08:00 Argentina time (UTC-3) == 11:00 UTC.
+    # GitHub cron is always UTC; change this line if your timezone differs.
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated source ids to run (blank = all)"
+        required: false
+        default: ""
+      min_cameras:
+        description: "Abort without writing below this many cameras"
+        required: false
+        default: "500"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Never let a manual run collide with the scheduled one: they both write to the
+# same branch and the same Pages deployment.
+concurrency:
+  group: update-cameras
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Fetch and publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build dataset
+        env:
+          # Optional keys. Each unlocks one more source; the run works without
+          # any of them, it just indexes fewer cameras.
+          WINDY_API_KEY: ${{ secrets.WINDY_API_KEY }}
+          TFL_APP_KEY: ${{ secrets.TFL_APP_KEY }}
+          WSDOT_ACCESS_CODE: ${{ secrets.WSDOT_ACCESS_CODE }}
+          QLD_TRAFFIC_KEY: ${{ secrets.QLD_TRAFFIC_KEY }}
+          KEY_511NY: ${{ secrets.KEY_511NY }}
+          KEY_FL511: ${{ secrets.KEY_FL511 }}
+          KEY_511GA: ${{ secrets.KEY_511GA }}
+          KEY_MASS511: ${{ secrets.KEY_MASS511 }}
+          KEY_511PA: ${{ secrets.KEY_511PA }}
+          KEY_511VA: ${{ secrets.KEY_511VA }}
+          KEY_UDOT: ${{ secrets.KEY_UDOT }}
+          KEY_511IA: ${{ secrets.KEY_511IA }}
+          KEY_511WI: ${{ secrets.KEY_511WI }}
+          KEY_511NE: ${{ secrets.KEY_511NE }}
+        run: |
+          ONLY_ARGS=""
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            for source in $(echo "${{ github.event.inputs.only }}" | tr ',' ' '); do
+              ONLY_ARGS="$ONLY_ARGS --only $source"
+            done
+          fi
+          python -m cameras build \
+            --out data \
+            --min-cameras "${{ github.event.inputs.min_cameras || '500' }}" \
+            --summary "$GITHUB_STEP_SUMMARY" \
+            $ONLY_ARGS
+
+      - name: Commit dataset
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --staged --quiet; then
+            echo "No changes in the dataset."
+            exit 0
+          fi
+          COUNT=$(python -c "import json;print(json.load(open('data/v1/index.json'))['count'])")
+          git commit -m "data: refresh camera index (${COUNT} cameras)"
+          # The scheduled run can race a push to the branch; rebase and retry.
+          for attempt in 1 2 3 4; do
+            if git push; then exit 0; fi
+            echo "Push failed (attempt $attempt), rebasing..."
+            sleep $((2 ** attempt))
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          done
+          echo "::error::Could not push the refreshed dataset after 4 attempts."
+          exit 1
+
+      - name: Assemble Pages site
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data/. _site/
+          echo "Published $(find _site -name '*.json' | wc -l) JSON files."
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
