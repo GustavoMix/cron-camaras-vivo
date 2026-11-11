@@ -1,1 +1,53 @@
-{"cameras":[]}
+{
+  "cameras": [
+    {
+      "native_id": "yt-balneario-camboriu",
+      "name": "Balneario Camboriú",
+      "country": "BR",
+      "region": "SC",
+      "city": "Balneário Camboriú",
+      "lat": -26.9926,
+      "lon": -48.6352,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "playa"
+      ],
+      "youtube": "j4Wne61IJ3I",
+      "attribution": "BNU.tv (YouTube)"
+    },
+    {
+      "native_id": "yt-florianopolis-campeche",
+      "name": "Florianópolis · Campeche",
+      "country": "BR",
+      "region": "SC",
+      "city": "Florianópolis",
+      "lat": -27.6767,
+      "lon": -48.4811,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "playa"
+      ],
+      "youtube": "rdCrFl1VlUQ",
+      "attribution": "Maaxcam Ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-porto-belo",
+      "name": "Porto Belo",
+      "country": "BR",
+      "region": "SC",
+      "city": "Porto Belo",
+      "lat": -27.1586,
+      "lon": -48.5547,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "playa",
+        "harbor"
+      ],
+      "youtube": "8TqQyFkCKW8",
+      "attribution": "YouTube live"
+    }
+  ]
+}

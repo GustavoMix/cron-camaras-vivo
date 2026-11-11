@@ -106,10 +106,12 @@ def stable_url_key(url: str | None) -> str | None:
     if not url:
         return None
     parts = urlsplit(url)
+    # On YouTube, ``v`` IS the identity of the video, not a cache buster.
+    busters = _CACHE_BUSTERS - {"v"} if "youtube.com" in parts.netloc.lower() else _CACHE_BUSTERS
     kept = [
         pair
         for pair in parts.query.split("&")
-        if pair and pair.split("=", 1)[0].lower() not in _CACHE_BUSTERS
+        if pair and pair.split("=", 1)[0].lower() not in busters
     ]
     host = parts.netloc.lower()
     path = parts.path.rstrip("/") or "/"

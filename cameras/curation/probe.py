@@ -29,7 +29,7 @@ MIN_IMAGE_HEIGHT = 720
 MIN_VIDEO_HEIGHT = 720  # best available variant must reach 720p
 # Compressed bytes per pixel. Fog, night black and frozen/blank frames compress to almost nothing.
 MIN_BYTES_PER_PIXEL = 0.04
-PLAYABLE_FORMATS = frozenset({"hls", "mp4", "dash"})
+PLAYABLE_FORMATS = frozenset({"hls", "mp4", "dash", "youtube"})
 
 
 @dataclass(slots=True)
@@ -64,6 +64,8 @@ class Prober:
             async with self._sem:
                 if media == "hls":
                     result = await self._hls(url, deep)
+                elif media == "youtube":
+                    result = await self._youtube(url)
                 elif media == "image":
                     result = await self._image(url)
                 else:
@@ -133,6 +135,15 @@ class Prober:
             codecs=codecs,
             tizen_ok=tizen_playable(codecs),
         )
+
+    async def _youtube(self, url: str) -> ProbeResult:
+        """A YouTube video is embeddable (and exists) when its oEmbed endpoint answers 200."""
+        response = await self._client.get(
+            "https://www.youtube.com/oembed", params={"url": url, "format": "json"}
+        )
+        if response.status_code != 200:
+            return ProbeResult(False, "youtube", f"not_embeddable_{response.status_code}")
+        return ProbeResult(True, "youtube", tizen_ok=True)
 
     async def _ranged(self, url: str, media: str) -> ProbeResult:
         response = await self._client.get(url, headers={"Range": "bytes=0-4095"})

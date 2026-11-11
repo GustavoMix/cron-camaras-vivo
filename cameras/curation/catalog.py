@@ -33,7 +33,7 @@ def catalog_camera(entry: dict[str, Any], verdict: Verdict, quality: int) -> dic
     location = {
         key: meta[key] for key in ("country", "region", "city", "lat", "lon") if key in meta
     }
-    if probe.get("media") in {"hls", "mp4", "dash"} and meta.get("stream"):
+    if probe.get("media") in {"hls", "mp4", "dash", "youtube"} and meta.get("stream"):
         media: dict[str, Any] = {
             "type": "video",
             "url": meta["stream"],
@@ -42,6 +42,10 @@ def catalog_camera(entry: dict[str, Any], verdict: Verdict, quality: int) -> dic
         for key in ("width", "height", "codecs"):
             if key in probe:
                 media[key] = probe[key]
+        if probe["media"] == "youtube":
+            video_id = meta["stream"].split("v=")[-1]
+            media["id"] = video_id
+            media.setdefault("thumbnail", f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg")
         if meta.get("image"):
             media["thumbnail"] = meta["image"]
     else:

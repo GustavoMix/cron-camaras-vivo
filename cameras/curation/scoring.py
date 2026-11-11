@@ -31,7 +31,7 @@ def score(entry: dict[str, Any], now: datetime | None = None) -> int:
     media = probe.get("media")
     if media == "hls" and probe.get("tizen_ok", True):
         playback = 20
-    elif media in {"mp4", "dash"}:
+    elif media in {"mp4", "dash", "youtube"}:
         playback = 16
     elif media == "image":
         playback = 8

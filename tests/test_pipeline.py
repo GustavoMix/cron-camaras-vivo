@@ -35,6 +35,13 @@ def camera(**overrides):
     return make_camera(**{**defaults, **overrides})
 
 
+class TestYoutubeIdentity:
+    def test_different_youtube_videos_are_not_duplicates(self):
+        a = stable_url_key("https://www.youtube.com/watch?v=AAAAAAAAAAA")
+        b = stable_url_key("https://www.youtube.com/watch?v=BBBBBBBBBBB")
+        assert a != b
+
+
 class TestNormalization:
     def test_rejects_camera_without_media(self):
         assert camera(image=None, stream=None) is None

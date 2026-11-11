@@ -55,7 +55,8 @@ class Manual(Source):
             return None
         rights = record.get("rights") if isinstance(record.get("rights"), dict) else None
         license_text = rights.get("license") if rights else None
-        return make_camera(
+        youtube = record.get("youtube")
+        camera = make_camera(
             source=self.id,
             native_id=record.get("native_id"),
             name=record.get("name"),
@@ -66,13 +67,18 @@ class Manual(Source):
             lon=record.get("lon"),
             kind=record.get("kind", "scenic"),
             image=record.get("image"),
-            stream=record.get("stream"),
+            stream=(
+                f"https://www.youtube.com/watch?v={youtube}" if youtube else record.get("stream")
+            ),
             attribution=record.get("attribution"),
             license=license_text,
             source_url=record.get("source_url"),
             tags=record.get("tags"),
             rights=rights,
         )
+        if camera and youtube:
+            camera.stream_format = "youtube"
+        return camera
 
 
 def build_sources() -> list[Source]:

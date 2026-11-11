@@ -159,7 +159,7 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
             stats["other_country"] += 1
             continue
         if config.live_only and not (
-            camera.stream and camera.stream_format in {"hls", "dash"}
+            camera.stream and camera.stream_format in {"hls", "dash", "youtube"}
         ):
             stats["not_live_video"] += 1
             continue
