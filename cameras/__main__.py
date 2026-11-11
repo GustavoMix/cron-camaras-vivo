@@ -66,6 +66,10 @@ def main(argv: list[str] | None = None) -> int:
     curate_parser.add_argument("--force-all", action="store_true", help="probe everything now")
     curate_parser.add_argument("--base-url", default="")
     curate_parser.add_argument("--test-per-source", type=int, default=8)
+    curate_parser.add_argument("--countries", default="",
+                               help="comma-separated ISO codes to keep, e.g. BR,AR,CL")
+    curate_parser.add_argument("--allow-images", action="store_true",
+                               help="also publish still photos (default: live video only)")
     curate_parser.add_argument("--test-mode", action="store_true",
                                help="TEST ONLY: skip rights/theme gates, write to <out>/test")
     curate_parser.add_argument("--summary", type=Path, default=None)
@@ -95,6 +99,8 @@ def _curate(args: argparse.Namespace) -> int:
         state_path=Path("state/test-state.json" if test else "state/cameras-state.json"),
         test_mode=test,
         test_per_source=args.test_per_source,
+        live_only=not args.allow_images,
+        countries=[c.strip().upper() for c in args.countries.split(",") if c.strip()] or None,
         only=args.only,
         max_catalog=args.max_catalog,
         min_score=args.min_score,

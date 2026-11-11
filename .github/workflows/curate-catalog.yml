@@ -62,12 +62,14 @@ jobs:
           # Only needed once a keyed source has been marked verified.
           WINDY_API_KEY: ${{ secrets.WINDY_API_KEY }}
           WINDY_COUNTRIES: ${{ inputs.windy_countries }}
+          # Latin America focus. Override with a repository variable if needed.
+          COUNTRIES: ${{ vars.COUNTRIES || 'AR,BO,BR,CL,CO,CR,CU,DO,EC,GT,HN,MX,NI,PA,PE,PY,SV,UY,VE,PR' }}
         run: |
           ARGS=""
           if [ "${{ inputs.test_mode }}" = "true" ]; then ARGS="$ARGS --test-mode --test-per-source 60"; fi
           if [ "${{ inputs.force_all }}" = "true" ]; then ARGS="$ARGS --force-all"; fi
           if [ "${{ inputs.include_pending }}" = "true" ]; then ARGS="$ARGS --include-pending"; fi
-          python -m cameras curate --out data \
+          python -m cameras curate --out data --countries "$COUNTRIES" \
             --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" \
             --probe-budget 600 --summary "$GITHUB_STEP_SUMMARY" $ARGS
 

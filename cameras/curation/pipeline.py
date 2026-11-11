@@ -67,6 +67,10 @@ class CurateConfig:
     # TEST ONLY: ignore the rights gate and theme filter, mark the catalog test=true,
     # and keep at most test_per_source cameras per source. Never used by the schedule.
     test_mode: bool = False
+    # Live video only (HLS, 720p+ enforced by the prober). Stills are dropped, not shown.
+    live_only: bool = True
+    # Restrict the catalog to these ISO country codes (None = anywhere).
+    countries: list[str] | None = None
     test_per_source: int = 8
     transport: httpx.AsyncBaseTransport | None = None  # tests inject a mock
 
@@ -151,6 +155,14 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
     seen_ids: set[str] = set()
     per_source_seen: Counter[str] = Counter()
     for camera in cameras:
+        if config.countries and (camera.country or "") not in config.countries:
+            stats["other_country"] += 1
+            continue
+        if config.live_only and not (
+            camera.stream and camera.stream_format in {"hls", "dash"}
+        ):
+            stats["not_live_video"] += 1
+            continue
         category = classify(camera, allow_traffic=config.test_mode)
         if category is None:
             stats["off_theme"] += 1

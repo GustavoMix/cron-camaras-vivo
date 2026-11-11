@@ -252,10 +252,11 @@ def write_inputs(root: Path, n: int = 12) -> None:
         camera["stream"] = f"https://cdn.example/c{i}/master.m3u8"
     cameras.append({
         "native_id": "no-rights", "name": "Mystery beach", "kind": "scenic", "tags": ["beach"],
-        "image": "https://cdn.example/x.jpg",
+        "stream": "https://cdn.example/n/master.m3u8", "image": "https://cdn.example/x.jpg",
     })
     cameras.append({
         "native_id": "road", "name": "Highway", "kind": "traffic", "image": "https://cdn.example/r.jpg",
+        "stream": "https://cdn.example/r/master.m3u8",
         "rights": rights,
     })
     (root / "curated" / "cameras.json").write_text(json.dumps({"cameras": cameras}))
