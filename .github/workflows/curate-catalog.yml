@@ -64,7 +64,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # State must persist every run (it is the probe history), but only a
           # change in the published catalog needs a Pages deploy.
-          if git diff --quiet -- data/v2/catalog.json data/v2/manifest.json; then
+          # porcelain also reports brand-new (untracked) files, which `git diff` misses.
+          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
