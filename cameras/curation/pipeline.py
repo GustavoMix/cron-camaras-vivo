@@ -35,7 +35,7 @@ from . import state as st
 from .catalog import catalog_camera, write_catalog, write_json
 from .classify import classify
 from .probe import PLAYABLE_FORMATS, Prober
-from .rights import PUBLISHABLE, RightsPolicy
+from .rights import PUBLISHABLE, RightsPolicy, Verdict
 from .scoring import score
 
 log = logging.getLogger(__name__)
@@ -64,6 +64,10 @@ class CurateConfig:
     max_drop_ratio: float = 0.5
     deep_wait_s: float = 4.0
     base_url: str = ""
+    # TEST ONLY: ignore the rights gate and theme filter, mark the catalog test=true,
+    # and keep at most test_per_source cameras per source. Never used by the schedule.
+    test_mode: bool = False
+    test_per_source: int = 8
     transport: httpx.AsyncBaseTransport | None = None  # tests inject a mock
 
 
@@ -76,6 +80,26 @@ class CurateReport:
     refused: str | None = None
     outage_suspected: bool = False
     stats: dict[str, Any] = field(default_factory=dict)
+
+
+def _verdict(policy, source, rights, meta, today, config) -> Verdict:
+    """Real rights gate, or (test mode only) a clearly-labelled non-commercial pass."""
+    if config.test_mode:
+        return Verdict(
+            True,
+            reason="test_mode",
+            license=meta.get("license") or "test data",
+            attribution=meta.get("attribution"),
+            evidence_url=meta.get("source_url") or "test-mode",
+            verified_on=today.isoformat(),
+            commercial=False,
+        )
+    return policy.verdict(source, rights, today)
+
+
+def _is_network_failure(reason: str | None) -> bool:
+    reason = reason or ""
+    return reason == "timeout" or reason.startswith(("net_", "http_5", "variant_http_5"))
 
 
 def probe_target(meta: dict[str, Any]) -> tuple[str, str | None] | None:
@@ -109,7 +133,9 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
 
     # 1. Discovery, restricted to sources worth fetching.
     wanted = policy.source_ids(PUBLISHABLE) | {"manual"}
-    if config.include_pending:
+    if config.test_mode:
+        wanted |= set(policy.sources)
+    elif config.include_pending:
         wanted |= policy.source_ids("pending")
     sources = [s for s in select_sources(config.only) if s.id in wanted]
     results = await fetch_all(sources, concurrency=config.fetch_concurrency)
@@ -123,15 +149,21 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
     # 2-3. Theme + rights gate; everything that passes is tracked in state.
     review: list[dict[str, Any]] = []
     seen_ids: set[str] = set()
+    per_source_seen: Counter[str] = Counter()
     for camera in cameras:
-        category = classify(camera)
+        category = classify(camera, allow_traffic=config.test_mode)
         if category is None:
             stats["off_theme"] += 1
             continue
         if probe_target(_meta(camera, category)) is None:
             stats["no_playable_media"] += 1
             continue
-        verdict = policy.verdict(camera.source, camera.rights, today)
+        if config.test_mode:
+            if per_source_seen[camera.source] >= config.test_per_source:
+                continue
+            per_source_seen[camera.source] += 1
+        meta_for_gate = _meta(camera, category)
+        verdict = _verdict(policy, camera.source, camera.rights, meta_for_gate, today, config)
         if not verdict.ok:
             rejected[verdict.reason] += 1
             if config.include_pending and verdict.reason.startswith("status_pending"):
@@ -176,8 +208,14 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
     stats["probed"] = len(outcomes)
     stats["skipped_budget"] = len(queue) - len(outcomes)
 
-    failures = [o for o in outcomes if not o[2].ok]
-    if len(outcomes) >= OUTAGE_MIN_SAMPLE and len(failures) / len(outcomes) >= OUTAGE_FAIL_RATIO:
+    # Only transport-level failures suggest a runner/network problem. A camera that answered
+    # fine but is low-res, frozen or offline is a verdict about the camera, not an outage.
+    failures = [o for o in outcomes if not o[2].ok and _is_network_failure(o[2].reason)]
+    total_network_sample = len(outcomes)
+    if (
+        total_network_sample >= OUTAGE_MIN_SAMPLE
+        and len(failures) / total_network_sample >= OUTAGE_FAIL_RATIO
+    ):
         report.outage_suspected = True
         log.error(
             "%d/%d probes failed; assuming a network problem and keeping state as is",
@@ -198,7 +236,7 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
         if entry["status"] not in st.PUBLISHED:
             continue
         meta = entry["meta"]
-        verdict = policy.verdict(meta["source"], meta.get("rights"), today)
+        verdict = _verdict(policy, meta["source"], meta.get("rights"), meta, today, config)
         if not verdict.ok:
             rejected[f"published_{verdict.reason}"] += 1
             continue
@@ -240,7 +278,7 @@ async def curate(config: CurateConfig, now: datetime | None = None) -> CurateRep
         log.error(report.refused)
     else:
         report.changed, report.version = write_catalog(
-            chosen, config.out_dir, report.generated_at, config.base_url
+            chosen, config.out_dir, report.generated_at, config.base_url, test=config.test_mode
         )
     report.published = len(chosen)
 

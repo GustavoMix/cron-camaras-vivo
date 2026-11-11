@@ -23,6 +23,12 @@ from .hls import Playlist, parse_playlist, pick_variant, tizen_playable
 MAX_IMAGE_BYTES = 1_500_000
 MIN_IMAGE_BYTES = 4_096
 MAX_IMAGE_AGE_S = 2 * 86_400
+# Quality bar for stills: a TV is 1080p, so thumbnails and 352x240 road cameras are out.
+MIN_IMAGE_WIDTH = 1280
+MIN_IMAGE_HEIGHT = 720
+MIN_VIDEO_HEIGHT = 720  # best available variant must reach 720p
+# Compressed bytes per pixel. Fog, night black and frozen/blank frames compress to almost nothing.
+MIN_BYTES_PER_PIXEL = 0.04
 PLAYABLE_FORMATS = frozenset({"hls", "mp4", "dash"})
 
 
@@ -98,6 +104,9 @@ class Prober:
             if playlist.is_master:
                 return ProbeResult(False, "hls", "nested_master")
 
+        if height is not None and height < MIN_VIDEO_HEIGHT:
+            return ProbeResult(False, "hls", "low_res", width=width, height=height)
+
         verdict = _judge_media_playlist(playlist)
         if verdict:
             return ProbeResult(False, "hls", verdict, width=width, height=height)
@@ -152,7 +161,13 @@ class Prober:
         age = _age_seconds(last_modified)
         if age is not None and age > MAX_IMAGE_AGE_S:
             return ProbeResult(False, "image", "stale", age_s=age)
-        return ProbeResult(True, "image", age_s=age, tizen_ok=True)
+        width, height = image_size(bytes(body))
+        if width and height:
+            if width < MIN_IMAGE_WIDTH or height < MIN_IMAGE_HEIGHT:
+                return ProbeResult(False, "image", "low_res", width=width, height=height)
+            if len(body) / (width * height) < MIN_BYTES_PER_PIXEL:
+                return ProbeResult(False, "image", "flat_image", width=width, height=height)
+        return ProbeResult(True, "image", width=width, height=height, age_s=age, tizen_ok=True)
 
 
 def _judge_media_playlist(playlist: Playlist) -> str | None:
@@ -187,3 +202,29 @@ def _age_seconds(header: str | None) -> int | None:
     if moment.tzinfo is None:
         moment = moment.replace(tzinfo=UTC)
     return max(0, int((datetime.now(UTC) - moment).total_seconds()))
+
+
+_PNG_MAGIC = bytes([0x89, 0x50, 0x4E, 0x47])
+_JPEG_MAGIC = bytes([0xFF, 0xD8])
+
+
+def image_size(data: bytes) -> tuple[int | None, int | None]:
+    """Width and height of a PNG or JPEG without decoding it; (None, None) if unknown."""
+    if data.startswith(_PNG_MAGIC) and len(data) >= 24:
+        return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+    if data.startswith(_JPEG_MAGIC):
+        i = 2
+        while i + 9 < len(data):
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if marker in (0xD8, 0x01) or 0xD0 <= marker <= 0xD7 or marker == 0xFF:
+                i += 2 if marker != 0xFF else 1
+                continue
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                return int.from_bytes(data[i + 7 : i + 9], "big"), int.from_bytes(
+                    data[i + 5 : i + 7], "big"
+                )
+            i += 2 + int.from_bytes(data[i + 2 : i + 4], "big")
+    return None, None

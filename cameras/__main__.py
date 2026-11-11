@@ -65,6 +65,9 @@ def main(argv: list[str] | None = None) -> int:
                                help="also fetch sources awaiting a rights decision (review only)")
     curate_parser.add_argument("--force-all", action="store_true", help="probe everything now")
     curate_parser.add_argument("--base-url", default="")
+    curate_parser.add_argument("--test-per-source", type=int, default=8)
+    curate_parser.add_argument("--test-mode", action="store_true",
+                               help="TEST ONLY: skip rights/theme gates, write to <out>/test")
     curate_parser.add_argument("--summary", type=Path, default=None)
 
     subparsers.add_parser("list", help="list registered sources")
@@ -86,8 +89,12 @@ def main(argv: list[str] | None = None) -> int:
 def _curate(args: argparse.Namespace) -> int:
     from .curation.pipeline import CurateConfig, curate
 
+    test = args.test_mode
     config = CurateConfig(
-        out_dir=args.out,
+        out_dir=args.out / "test" if test else args.out,
+        state_path=Path("state/test-state.json" if test else "state/cameras-state.json"),
+        test_mode=test,
+        test_per_source=args.test_per_source,
         only=args.only,
         max_catalog=args.max_catalog,
         min_score=args.min_score,

@@ -65,6 +65,35 @@ async def probe(url: str, fmt: str | None, deep: bool = False, **kwargs):
         return await Prober(client, deep_wait_s=0).probe(url, fmt, deep=deep)
 
 
+def make_jpeg(width: int, height: int, size: int) -> bytes:
+    """A fake JPEG: valid SOI + SOF0 header, padded with filler to ``size`` bytes."""
+    sof = bytes([0xFF, 0xC0, 0x00, 0x11, 0x08]) + height.to_bytes(2, "big")
+    sof += width.to_bytes(2, "big") + bytes([3]) + bytes(9)
+    body = bytes([0xFF, 0xD8, 0xFF, 0xE0, 0x00, 0x04, 0x00, 0x00]) + sof
+    return body + bytes([0x11]) * max(0, size - len(body))
+
+
+class TestImageQuality:
+    async def probe_image(self, payload: bytes):
+        def handler(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(200, content=payload)
+
+        async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+            return await Prober(client).probe("https://cdn.example/x.jpg", None)
+
+    async def test_sharp_hd_photo_passes(self):
+        result = await self.probe_image(make_jpeg(1920, 1080, 400_000))
+        assert result.ok and (result.width, result.height) == (1920, 1080)
+
+    async def test_low_resolution_is_rejected(self):
+        result = await self.probe_image(make_jpeg(352, 240, 30_000))
+        assert not result.ok and result.reason == "low_res"
+
+    async def test_flat_or_blank_frame_is_rejected(self):
+        result = await self.probe_image(make_jpeg(1920, 1080, 20_000))
+        assert not result.ok and result.reason == "flat_image"
+
+
 class TestHls:
     def test_master_variants_and_selection(self):
         playlist = parse_playlist(MASTER, "https://cdn.example/x/master.m3u8")
@@ -295,6 +324,16 @@ class TestPipeline:
         assert down.outage_suspected
         assert (root / "state/s.json").read_text() == state_before
         assert down.published == 12  # nothing was taken off the air
+
+    async def test_uniformly_low_quality_is_not_mistaken_for_an_outage(self, root):
+        now = datetime(2026, 11, 11, 12, tzinfo=UTC)
+        await curate(config(root), now)
+
+        def tiny_images(request: httpx.Request) -> httpx.Response:
+            return httpx.Response(404)  # a clear answer from the server, not a network error
+
+        report = await curate(config(root, handler=tiny_images), now + timedelta(hours=12))
+        assert not report.outage_suspected
 
     async def test_probe_budget_defers_work_instead_of_failing(self, root):
         report = await curate(config(root, probe_budget_s=-1), datetime(2026, 11, 11, tzinfo=UTC))

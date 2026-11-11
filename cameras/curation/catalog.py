@@ -69,7 +69,7 @@ def catalog_camera(entry: dict[str, Any], verdict: Verdict, quality: int) -> dic
             "source_url": meta.get("source_url"),
             "evidence_url": verdict.evidence_url,
             "verified_on": verdict.verified_on,
-            "commercial_use": True,
+            "commercial_use": verdict.commercial,
         },
     }
     return camera
@@ -80,7 +80,11 @@ def _canonical(payload: Any) -> str:
 
 
 def write_catalog(
-    cameras: list[dict[str, Any]], out_dir: Path, generated_at: str, base_url: str = ""
+    cameras: list[dict[str, Any]],
+    out_dir: Path,
+    generated_at: str,
+    base_url: str = "",
+    test: bool = False,
 ) -> tuple[bool, str]:
     """Write catalog + manifest. Returns ``(changed, version)``."""
     root = out_dir / DIR
@@ -104,6 +108,7 @@ def write_catalog(
         "version": version,
         "updated_at": generated_at,
         "count": len(cameras),
+        **({"test": True} if test else {}),
         "categories": [{"id": c, "count": n} for c, n in counts.items() if n],
         "cameras": cameras,
     }
@@ -115,6 +120,7 @@ def write_catalog(
             "version": version,
             "updated_at": generated_at,
             "count": len(cameras),
+            **({"test": True} if test else {}),
             "catalog": f"{base_url}{DIR}/catalog.json",
         },
     )

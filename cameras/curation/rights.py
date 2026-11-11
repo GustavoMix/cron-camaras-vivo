@@ -30,6 +30,7 @@ class Verdict:
     attribution: str | None = None
     evidence_url: str | None = None
     verified_on: str | None = None
+    commercial: bool = True
 
 
 class RightsPolicy:

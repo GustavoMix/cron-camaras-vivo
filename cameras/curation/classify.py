@@ -31,10 +31,10 @@ REJECTED_KINDS = frozenset({"traffic", "airport"})
 CATEGORIES = tuple(name for name, _ in _RULES) + ("landscapes", "weather")
 
 
-def classify(camera: Camera) -> str | None:
+def classify(camera: Camera, *, allow_traffic: bool = False) -> str | None:
     """Return a category id, or ``None`` when the camera is off-theme."""
     if camera.kind in REJECTED_KINDS:
-        return None
+        return "cities" if allow_traffic else None
 
     words = set(re.findall(r"[a-z]+", f"{camera.name} {' '.join(camera.tags)}".lower()))
     for category, keywords in _RULES:
