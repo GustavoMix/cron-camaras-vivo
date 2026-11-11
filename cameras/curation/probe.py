@@ -142,6 +142,10 @@ class Prober:
             return ProbeResult(False, media, "not_dash")
         if media == "mp4" and not response.content:
             return ProbeResult(False, media, "empty")
+        if media == "mp4":
+            # Resolution is inside the MP4 box structure, which we do not parse. Unknown
+            # resolution cannot be shown to meet the 720p bar, so it is not published.
+            return ProbeResult(False, media, "resolution_unknown")
         return ProbeResult(True, media, tizen_ok=True)
 
     async def _image(self, url: str) -> ProbeResult:

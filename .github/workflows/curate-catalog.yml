@@ -12,6 +12,14 @@ on:
         description: "Probe every camera now, ignoring the adaptive schedule"
         type: boolean
         default: false
+      test_mode:
+        description: "TEST ONLY: skip rights gate, write data/test (never use for release)"
+        type: boolean
+        default: false
+      windy_countries:
+        description: "Windy countries for the test run, e.g. BR,AR,CL,MX"
+        type: string
+        default: ""
       force_deploy:
         description: "Redeploy Pages even if the catalog did not change"
         type: boolean
@@ -53,8 +61,10 @@ jobs:
         env:
           # Only needed once a keyed source has been marked verified.
           WINDY_API_KEY: ${{ secrets.WINDY_API_KEY }}
+          WINDY_COUNTRIES: ${{ inputs.windy_countries }}
         run: |
           ARGS=""
+          if [ "${{ inputs.test_mode }}" = "true" ]; then ARGS="$ARGS --test-mode --test-per-source 60"; fi
           if [ "${{ inputs.force_all }}" = "true" ]; then ARGS="$ARGS --force-all"; fi
           if [ "${{ inputs.include_pending }}" = "true" ]; then ARGS="$ARGS --include-pending"; fi
           python -m cameras curate --out data \
@@ -69,12 +79,12 @@ jobs:
           # State must persist every run (it is the probe history), but only a
           # change in the published catalog needs a Pages deploy.
           # porcelain also reports brand-new (untracked) files, which `git diff` misses.
-          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ] \n             && [ "${{ inputs.force_deploy }}" != "true" ]; then
+          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ] \n             && [ "${{ inputs.force_deploy }}" != "true" ] \n             && [ "${{ inputs.test_mode }}" != "true" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-          git add data/v2 state
+          git add data state
           if git diff --staged --quiet; then exit 0; fi
           git commit -m "data: curated catalog $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
           for attempt in 1 2 3 4; do

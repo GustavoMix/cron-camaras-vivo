@@ -22,7 +22,8 @@ from .base import Source
 API_URL = "https://api.windy.com/webcams/api/v3/webcams"
 PAGE_SIZE = 50
 # Guard against a pagination bug turning into an unbounded request loop.
-MAX_PAGES = 400
+MAX_PAGES = 40
+DEFAULT_CATEGORIES = "beach,mountain,landscape,island,lake,forest,coast,city,mountain-pass"
 
 
 class Windy(Source):
@@ -46,11 +47,7 @@ class Windy(Source):
         for _ in range(MAX_PAGES):
             payload = await http.get_json(
                 API_URL,
-                params={
-                    "limit": PAGE_SIZE,
-                    "offset": offset,
-                    "include": "location,images,urls,categories,player",
-                },
+                params=self._params(offset),
                 headers=headers,
             )
             if not isinstance(payload, dict):
@@ -74,6 +71,24 @@ class Windy(Source):
                 break
 
         return cameras
+
+    @staticmethod
+    def _params(offset: int) -> dict[str, Any]:
+        """Quality over quantity: ask only for scenic categories, optionally per country.
+
+        ``WINDY_CATEGORIES`` and ``WINDY_COUNTRIES`` (comma separated, e.g. ``BR,AR,CL``)
+        override the defaults. Check the parameter names against the current API docs.
+        """
+        params: dict[str, Any] = {
+            "limit": PAGE_SIZE,
+            "offset": offset,
+            "include": "location,images,urls,categories,player",
+            "categories": os.environ.get("WINDY_CATEGORIES", DEFAULT_CATEGORIES),
+        }
+        countries = os.environ.get("WINDY_COUNTRIES", "").strip()
+        if countries:
+            params["countries"] = countries
+        return params
 
     def _parse(self, record: Any) -> Camera | None:
         if not isinstance(record, dict):
