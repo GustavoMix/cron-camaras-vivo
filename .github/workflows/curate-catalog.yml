@@ -12,6 +12,10 @@ on:
         description: "Probe every camera now, ignoring the adaptive schedule"
         type: boolean
         default: false
+      force_deploy:
+        description: "Redeploy Pages even if the catalog did not change"
+        type: boolean
+        default: false
       include_pending:
         description: "Also fetch sources awaiting a rights decision (writes review.json)"
         type: boolean
@@ -65,7 +69,7 @@ jobs:
           # State must persist every run (it is the probe history), but only a
           # change in the published catalog needs a Pages deploy.
           # porcelain also reports brand-new (untracked) files, which `git diff` misses.
-          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ] \n             && [ "${{ inputs.force_deploy }}" != "true" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
