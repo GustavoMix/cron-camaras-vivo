@@ -1,7 +1,7 @@
 {
   "cameras": [
     {
-      "native_id": "yt-balneario-camboriu",
+      "native_id": "yt-j4Wne61IJ3I",
       "name": "Balneario Camboriú",
       "country": "BR",
       "region": "SC",
@@ -10,14 +10,13 @@
       "lon": -48.6352,
       "kind": "scenic",
       "tags": [
-        "beach",
-        "playa"
+        "beach"
       ],
       "youtube": "j4Wne61IJ3I",
       "attribution": "BNU.tv (YouTube)"
     },
     {
-      "native_id": "yt-florianopolis-campeche",
+      "native_id": "yt-rdCrFl1VlUQ",
       "name": "Florianópolis · Campeche",
       "country": "BR",
       "region": "SC",
@@ -26,14 +25,13 @@
       "lon": -48.4811,
       "kind": "scenic",
       "tags": [
-        "beach",
-        "playa"
+        "beach"
       ],
       "youtube": "rdCrFl1VlUQ",
       "attribution": "Maaxcam Ao Vivo (YouTube)"
     },
     {
-      "native_id": "yt-porto-belo",
+      "native_id": "yt-8TqQyFkCKW8",
       "name": "Porto Belo",
       "country": "BR",
       "region": "SC",
@@ -43,11 +41,213 @@
       "kind": "scenic",
       "tags": [
         "beach",
-        "playa",
         "harbor"
       ],
       "youtube": "8TqQyFkCKW8",
       "attribution": "YouTube live"
+    },
+    {
+      "native_id": "yt-EQgngcJjApk",
+      "name": "Cancún · Vista al sur",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.1619,
+      "lon": -86.8515,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "EQgngcJjApk",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-QuJMhE5qJXI",
+      "name": "Laguna Nichupté",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.12,
+      "lon": -86.78,
+      "kind": "scenic",
+      "tags": [
+        "lake",
+        "lagoon"
+      ],
+      "youtube": "QuJMhE5qJXI",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-W2W-xNmQjhk",
+      "name": "Viva Azteca · Playa del Carmen",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Playa del Carmen",
+      "lat": 20.6296,
+      "lon": -87.0739,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "W2W-xNmQjhk",
+      "attribution": "Viva Resorts by Wyndham (YouTube)"
+    },
+    {
+      "native_id": "yt-UnlUBl62aWA",
+      "name": "Isla Mujeres · Playa Norte",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Isla Mujeres",
+      "lat": 21.2417,
+      "lon": -86.7347,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "island"
+      ],
+      "youtube": "UnlUBl62aWA",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-CTivhpHqQ0o",
+      "name": "Cozumel",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cozumel",
+      "lat": 20.423,
+      "lon": -86.9223,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "island"
+      ],
+      "youtube": "CTivhpHqQ0o",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-xwuuvc86-CI",
+      "name": "Puerto Vallarta · Los Muertos",
+      "country": "MX",
+      "region": "Jalisco",
+      "city": "Puerto Vallarta",
+      "lat": 20.6,
+      "lon": -105.238,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "pier"
+      ],
+      "youtube": "xwuuvc86-CI",
+      "attribution": "El Dorado Restaurant (YouTube)"
+    },
+    {
+      "native_id": "yt-Ozvr21XUhfY",
+      "name": "Acapulco · Playa Condesa",
+      "country": "MX",
+      "region": "Guerrero",
+      "city": "Acapulco",
+      "lat": 16.8636,
+      "lon": -99.8731,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "Ozvr21XUhfY",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-keWC1l1flQw",
+      "name": "Tulum · Casa Malca",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Tulum",
+      "lat": 20.2114,
+      "lon": -87.4654,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "keWC1l1flQw",
+      "attribution": "Beach Live Cams (YouTube)"
+    },
+    {
+      "native_id": "yt-ZJoYo-XxszY",
+      "name": "Mazatlán",
+      "country": "MX",
+      "region": "Sinaloa",
+      "city": "Mazatlán",
+      "lat": 23.2494,
+      "lon": -106.4111,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "ZJoYo-XxszY",
+      "attribution": "Webcams de Mexico TV (YouTube)"
+    },
+    {
+      "native_id": "yt-LtvUi_SoTJE",
+      "name": "Volcán Popocatépetl · Altzomoni",
+      "country": "MX",
+      "region": "Estado de México",
+      "city": "Amecameca",
+      "lat": 19.0225,
+      "lon": -98.6278,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "LtvUi_SoTJE",
+      "attribution": "WebcamsDeMexico (YouTube)"
+    },
+    {
+      "native_id": "yt-8c4M11yu5L4",
+      "name": "Popocatépetl · San Matías Tlalancaleca",
+      "country": "MX",
+      "region": "Puebla",
+      "city": "Tlalancaleca",
+      "lat": 19.2,
+      "lon": -98.5,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "8c4M11yu5L4",
+      "attribution": "afarTV (YouTube)"
+    },
+    {
+      "native_id": "yt-i1_y735Rowg",
+      "name": "Guadalajara · Poniente",
+      "country": "MX",
+      "region": "Jalisco",
+      "city": "Guadalajara",
+      "lat": 20.6597,
+      "lon": -103.3496,
+      "kind": "scenic",
+      "tags": [
+        "city",
+        "skyline"
+      ],
+      "youtube": "i1_y735Rowg",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-5jPpMkg5daM",
+      "name": "Valparaíso",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Valparaíso",
+      "lat": -33.0472,
+      "lon": -71.6127,
+      "kind": "scenic",
+      "tags": [
+        "harbor",
+        "port"
+      ],
+      "youtube": "5jPpMkg5daM",
+      "attribution": "Manupuntocl (YouTube)"
     }
   ]
 }
