@@ -81,7 +81,8 @@ jobs:
           # State must persist every run (it is the probe history), but only a
           # change in the published catalog needs a Pages deploy.
           # porcelain also reports brand-new (untracked) files, which `git diff` misses.
-          if [ -z "$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)" ] \n             && [ "${{ inputs.force_deploy }}" != "true" ] \n             && [ "${{ inputs.test_mode }}" != "true" ]; then
+          CAT_CHANGED="$(git status --porcelain -- data/v2/catalog.json data/v2/manifest.json)"
+          if [ -z "$CAT_CHANGED" ] && [ "${{ inputs.force_deploy }}" != "true" ] && [ "${{ inputs.test_mode }}" != "true" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
