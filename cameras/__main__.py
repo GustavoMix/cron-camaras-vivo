@@ -2,6 +2,7 @@
 
     python -m cameras build                     # full run into ./data
     python -m cameras build --only 511on        # single source, for development
+    python -m cameras curate                    # verified catalog -> data/v2 (TV app)
     python -m cameras list                      # show the registry
 """
 
@@ -52,6 +53,20 @@ def main(argv: list[str] | None = None) -> int:
         help="append a Markdown run summary to this file (e.g. $GITHUB_STEP_SUMMARY)",
     )
 
+    curate_parser = subparsers.add_parser(
+        "curate", help="verified, rights-cleared catalog for the TV app (data/v2)"
+    )
+    curate_parser.add_argument("--out", type=Path, default=Path("data"))
+    curate_parser.add_argument("--only", action="append")
+    curate_parser.add_argument("--max-catalog", type=int, default=300)
+    curate_parser.add_argument("--min-score", type=int, default=55)
+    curate_parser.add_argument("--probe-budget", type=float, default=480.0, help="seconds")
+    curate_parser.add_argument("--include-pending", action="store_true",
+                               help="also fetch sources awaiting a rights decision (review only)")
+    curate_parser.add_argument("--force-all", action="store_true", help="probe everything now")
+    curate_parser.add_argument("--base-url", default="")
+    curate_parser.add_argument("--summary", type=Path, default=None)
+
     subparsers.add_parser("list", help="list registered sources")
 
     args = parser.parse_args(argv)
@@ -63,7 +78,54 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "list":
         return _list_sources()
+    if args.command == "curate":
+        return _curate(args)
     return _build(args)
+
+
+def _curate(args: argparse.Namespace) -> int:
+    from .curation.pipeline import CurateConfig, curate
+
+    config = CurateConfig(
+        out_dir=args.out,
+        only=args.only,
+        max_catalog=args.max_catalog,
+        min_score=args.min_score,
+        probe_budget_s=args.probe_budget,
+        include_pending=args.include_pending,
+        force_all=args.force_all,
+        base_url=args.base_url,
+    )
+    try:
+        report = asyncio.run(curate(config))
+    except Exception as exc:  # noqa: BLE001
+        logging.error("curate failed: %s", exc)
+        return 1
+
+    logging.info(
+        "published %d cameras (version %s, changed=%s) in %.1fs",
+        report.published, report.version or "-", report.changed, report.stats.get("duration_s", 0),
+    )
+    if args.summary:
+        args.summary.parent.mkdir(parents=True, exist_ok=True)
+        with args.summary.open("a", encoding="utf-8") as handle:
+            stats = report.stats
+            lines = [
+                "## Catalog curation",
+                "",
+                f"- **Published:** {report.published} (changed: {report.changed})",
+                f"- **Probed:** {stats.get('probed', 0)} of {stats.get('due', 0)} due",
+                f"- **Status:** {stats.get('by_status')}",
+                f"- **Rejected:** {stats.get('rejected')}",
+            ]
+            if report.refused:
+                lines.append(f"- **REFUSED:** {report.refused}")
+            if report.outage_suspected:
+                lines.append("- **Outage suspected:** state not updated")
+            handle.write("\n".join(lines) + "\n")
+    # Refusals and suspected outages are loud but not fatal: the published
+    # catalog stays as it was, and the workflow can alert on the warning.
+    return 0
 
 
 def _list_sources() -> int:

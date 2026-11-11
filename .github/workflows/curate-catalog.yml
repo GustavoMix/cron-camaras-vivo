@@ -1,0 +1,105 @@
+name: Curate catalog
+
+# Every 12 hours: discover -> rights gate -> verify playback -> publish.
+# Minute 17, not 0: GitHub's scheduler is overloaded at the top of the hour and
+# delays (or drops) jobs queued then.
+on:
+  schedule:
+    - cron: "17 5,17 * * *"
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: "Probe every camera now, ignoring the adaptive schedule"
+        type: boolean
+        default: false
+      include_pending:
+        description: "Also fetch sources awaiting a rights decision (writes review.json)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Shares the group with the weekly raw-index workflow: both write the same
+# branch and the same Pages deployment.
+concurrency:
+  group: update-cameras
+  cancel-in-progress: false
+
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Curate
+        env:
+          # Only needed once a keyed source has been marked verified.
+          WINDY_API_KEY: ${{ secrets.WINDY_API_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.force_all }}" = "true" ]; then ARGS="$ARGS --force-all"; fi
+          if [ "${{ inputs.include_pending }}" = "true" ]; then ARGS="$ARGS --include-pending"; fi
+          python -m cameras curate --out data \
+            --base-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" \
+            --probe-budget 600 --summary "$GITHUB_STEP_SUMMARY" $ARGS
+
+      - name: Commit catalog and state
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # State must persist every run (it is the probe history), but only a
+          # change in the published catalog needs a Pages deploy.
+          if git diff --quiet -- data/v2/catalog.json data/v2/manifest.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          git add data/v2 state
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "data: curated catalog $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for attempt in 1 2 3 4; do
+            if git push; then exit 0; fi
+            sleep $((2 ** attempt))
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          done
+          echo "::error::Could not push after 4 attempts."
+          exit 1
+
+      - name: Assemble Pages site
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data/. _site/
+      - uses: actions/configure-pages@v5
+        if: steps.commit.outputs.changed == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.commit.outputs.changed == 'true'
+        with:
+          path: _site
+
+  deploy:
+    needs: curate
+    if: needs.curate.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

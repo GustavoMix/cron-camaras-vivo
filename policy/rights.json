@@ -1,0 +1,256 @@
+{
+  "schema": 1,
+  "_readme": "Default-deny. Set status to 'verified' ONLY after reading the terms, with commercial_use=true, evidence_url, verified_on and review_by. Hand-curated cameras carry their own rights block in curated/cameras.json.",
+  "sources": {
+    "511ab": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Alberta 511",
+      "attribution": "Alberta 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511ga": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511 Georgia",
+      "attribution": "511 Georgia",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511ia": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511 Iowa",
+      "attribution": "511 Iowa",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511mb": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Manitoba 511",
+      "attribution": "Manitoba 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511nb": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by New Brunswick 511",
+      "attribution": "New Brunswick 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511ne": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511 Nebraska",
+      "attribution": "511 Nebraska",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511ns": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Nova Scotia 511",
+      "attribution": "Nova Scotia 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511ny": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511NY",
+      "attribution": "511NY",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511on": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Ontario 511",
+      "attribution": "Ontario 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511pa": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511PA",
+      "attribution": "511PA",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511pei": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Prince Edward Island 511",
+      "attribution": "Prince Edward Island 511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511sk": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Saskatchewan Highway Hotline",
+      "attribution": "Saskatchewan Highway Hotline",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511va": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511 Virginia",
+      "attribution": "511 Virginia",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "511wi": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by 511 Wisconsin",
+      "attribution": "511 Wisconsin",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "caltrans": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Public domain (Caltrans open data)",
+      "attribution": "California Department of Transportation",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "fl511": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by FL511",
+      "attribution": "FL511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "mass511": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by Mass511",
+      "attribution": "Mass511",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "nsw-traffic": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Transport for NSW Open Data Hub terms of use",
+      "attribution": "Transport for NSW",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "nyc-dot": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "NYC Open Data terms of use",
+      "attribution": "New York City DOT",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "nzta": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Waka Kotahi open data terms of use",
+      "attribution": "Waka Kotahi NZ Transport Agency",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "qld-traffic": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Creative Commons Attribution 4.0 (QLDTraffic open data)",
+      "attribution": "Queensland Department of Transport and Main Roads",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "tfl-jamcams": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Powered by TfL Open Data",
+      "attribution": "Transport for London",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "udot": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Open data published by UDOT Traffic",
+      "attribution": "UDOT Traffic",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    },
+    "windy": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "Windy Webcams API terms - attribution required",
+      "attribution": "Windy.com Webcams",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Scenic leader, but free-tier terms are non-commercial/image-only with short-lived URLs. Commercial redistribution needs the paid plan or written permission."
+    },
+    "wsdot": {
+      "status": "pending",
+      "commercial_use": null,
+      "license": "WSDOT traveler information API terms",
+      "attribution": "Washington State DOT",
+      "evidence_url": null,
+      "verified_on": null,
+      "review_by": null,
+      "notes": "Traffic-oriented feed; mostly off-theme for the TV catalog."
+    }
+  }
+}

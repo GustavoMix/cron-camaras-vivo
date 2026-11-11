@@ -195,6 +195,30 @@ cobertura):
 Una fuente sin su key **se saltea limpiamente**, no rompe la corrida. Si querés
 cobertura mundial de verdad, la que más mueve la aguja es `WINDY_API_KEY`.
 
+## Catálogo curado para la app de TV (`data/v2`)
+
+Además del índice crudo de arriba, `python -m cameras curate` produce un catálogo **pequeño y verificado**
+(`v2/manifest.json`, `v2/catalog.json`) para la app Samsung Tizen. Corre cada 12 h en
+`.github/workflows/curate-catalog.yml`. Calidad sobre cantidad: solo se publica lo que pasa
+
+1. **derechos** (`policy/rights.json`, default-deny; las cámaras manuales de `curated/cameras.json` traen su propia evidencia),
+2. **tema** (sin tráfico ni aeropuertos),
+3. **reproducción** (HLS en vivo, sin DRM, H.264/AAC, segmento accesible, lista que avanza),
+4. **historial** (`state/cameras-state.json`: candidate → active → degraded → offline → retired; nada se borra),
+5. **puntaje y diversidad** (tope de catálogo, cupos por país y fuente).
+
+Para publicar una fuente: léele los términos, y en `policy/rights.json` pon `status: "verified"`,
+`commercial_use: true`, `evidence_url`, `verified_on` y `review_by`. Mientras tanto, `--include-pending`
+genera `v2/review.json` con lo que esa fuente aportaría, sin publicar nada.
+
+```bash
+python -m cameras curate --out data                 # corrida normal (sondeo adaptivo)
+python -m cameras curate --force-all                # sondear todo ahora
+python -m cameras curate --include-pending          # informe de revisión de fuentes pendientes
+```
+
+Diseño completo y por qué: `ARCHITECTURE.md` en el repo `tizen-camaras-vivo`.
+
 ## Uso local
 
 ```bash

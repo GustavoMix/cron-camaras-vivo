@@ -50,6 +50,9 @@ class Camera:
     license: str | None = None
     source_url: str | None = None
     tags: list[str] = field(default_factory=list)
+    # Per-camera rights evidence (used by hand-curated entries). Never part of
+    # the v1 payload; the curation layer decides what to publish.
+    rights: dict[str, Any] | None = None
 
     @property
     def id(self) -> str:
@@ -139,6 +142,7 @@ def make_camera(
     license: str | None = None,
     source_url: str | None = None,
     tags: list[str] | None = None,
+    rights: dict[str, Any] | None = None,
 ) -> Camera | None:
     """Build a validated :class:`Camera`, or ``None`` if the record is unusable.
 
@@ -195,4 +199,5 @@ def make_camera(
         license=license,
         source_url=source_url,
         tags=sorted({t for t in (tags or []) if t}),
+        rights=rights,
     )
