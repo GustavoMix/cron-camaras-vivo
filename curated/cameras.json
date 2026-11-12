@@ -248,6 +248,1856 @@
       ],
       "youtube": "5jPpMkg5daM",
       "attribution": "Manupuntocl (YouTube)"
+    },
+    {
+      "native_id": "yt-_BMi3usEwi8",
+      "name": "Maldivas · Ocean Ambience 4K",
+      "country": "MV",
+      "region": "Maldivas",
+      "city": "InterContinental Maldives",
+      "lat": 3.2,
+      "lon": 73.2,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "ocean"
+      ],
+      "youtube": "_BMi3usEwi8",
+      "attribution": "Luxury Island (YouTube)"
+    },
+    {
+      "native_id": "yt-Thtj8Ht7Z_c",
+      "name": "Seychelles · Playa salvaje 4K",
+      "country": "SC",
+      "region": "Seychelles",
+      "city": "Seychelles",
+      "lat": -4.6796,
+      "lon": 55.492,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "ocean"
+      ],
+      "youtube": "Thtj8Ht7Z_c",
+      "attribution": "Luxury Island (YouTube)"
+    },
+    {
+      "native_id": "yt-xA7txncoo6o",
+      "name": "Seychelles · Atardecer en la isla Félicité",
+      "country": "SC",
+      "region": "Seychelles",
+      "city": "Isla Félicité",
+      "lat": -4.3333,
+      "lon": 55.8667,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "ocean"
+      ],
+      "youtube": "xA7txncoo6o",
+      "attribution": "Luxury Island (YouTube)"
+    },
+    {
+      "native_id": "yt-h9ba5qkpNA4",
+      "name": "Maldivas · VELAA",
+      "country": "MV",
+      "region": "Maldivas",
+      "city": "Maldivas",
+      "lat": 3.2,
+      "lon": 73.2,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "ocean"
+      ],
+      "youtube": "h9ba5qkpNA4",
+      "attribution": "Luxury Maldives (YouTube)"
+    },
+    {
+      "native_id": "yt-HP2PhJbLevY",
+      "name": "Ibiza · Café del Mar",
+      "country": "ES",
+      "region": "Baleares",
+      "city": "Ibiza",
+      "lat": 38.9805,
+      "lon": 1.3052,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "HP2PhJbLevY",
+      "attribution": "Café del Mar (YouTube)"
+    },
+    {
+      "native_id": "yt-NeHO46kDJ20",
+      "name": "Cancún · Punta Cancún",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.1743,
+      "lon": -86.8466,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "NeHO46kDJ20",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-aWxPsUHDkS8",
+      "name": "Cancún · Park Royal Beach",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.135,
+      "lon": -86.745,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "aWxPsUHDkS8",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-w9at4FtWOjQ",
+      "name": "Playa del Carmen · Quinta Avenida",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Playa del Carmen",
+      "lat": 20.6296,
+      "lon": -87.0739,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "w9at4FtWOjQ",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-_DmNoCNtuNI",
+      "name": "Cozumel · Hotel Presidente",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cozumel",
+      "lat": 20.423,
+      "lon": -86.9223,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "_DmNoCNtuNI",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-xMJrMGtXEGI",
+      "name": "Puerto Vallarta · Hyatt Ziva",
+      "country": "MX",
+      "region": "Jalisco",
+      "city": "Puerto Vallarta",
+      "lat": 20.6534,
+      "lon": -105.2253,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "xMJrMGtXEGI",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-NyLfXeGDYCY",
+      "name": "Nuevo Vallarta · Alamar",
+      "country": "MX",
+      "region": "Nayarit",
+      "city": "Nuevo Vallarta",
+      "lat": 20.7,
+      "lon": -105.3,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "NyLfXeGDYCY",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-DoRxExItSXc",
+      "name": "Los Cabos · Hoteles Solaris",
+      "country": "MX",
+      "region": "Baja California Sur",
+      "city": "Cabo San Lucas",
+      "lat": 22.8905,
+      "lon": -109.9167,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "DoRxExItSXc",
+      "attribution": "Hoteles Solaris (YouTube)"
+    },
+    {
+      "native_id": "yt-POijZWZ1qwc",
+      "name": "Cabo San Lucas · Playa El Médano",
+      "country": "MX",
+      "region": "Baja California Sur",
+      "city": "Cabo San Lucas",
+      "lat": 22.88,
+      "lon": -109.9,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "POijZWZ1qwc",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-mcp-Cs3hEdA",
+      "name": "Bucerías · Nayarit",
+      "country": "MX",
+      "region": "Nayarit",
+      "city": "Bucerías",
+      "lat": 20.75,
+      "lon": -105.33,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "mcp-Cs3hEdA",
+      "attribution": "Bucerías WebCam (YouTube)"
+    },
+    {
+      "native_id": "yt-AIhc-KrwC84",
+      "name": "Ixtapa Zihuatanejo",
+      "country": "MX",
+      "region": "Guerrero",
+      "city": "Ixtapa",
+      "lat": 17.67,
+      "lon": -101.55,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "AIhc-KrwC84",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-lrnOUZtoBwY",
+      "name": "Acapulco · Marina",
+      "country": "MX",
+      "region": "Guerrero",
+      "city": "Acapulco",
+      "lat": 16.8531,
+      "lon": -99.8237,
+      "kind": "scenic",
+      "tags": [
+        "harbor"
+      ],
+      "youtube": "lrnOUZtoBwY",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-OW_kgsqvZkI",
+      "name": "Huatulco · Bahía Santa Cruz",
+      "country": "MX",
+      "region": "Oaxaca",
+      "city": "Huatulco",
+      "lat": 15.745,
+      "lon": -96.13,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "OW_kgsqvZkI",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-NyABiD7X-Y8",
+      "name": "Mérida · Yucatán",
+      "country": "MX",
+      "region": "Yucatán",
+      "city": "Mérida",
+      "lat": 20.9674,
+      "lon": -89.5926,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "NyABiD7X-Y8",
+      "attribution": "WebcamsDeMexico Live (YouTube)"
+    },
+    {
+      "native_id": "yt-gj6lXqFzzbQ",
+      "name": "Ciudad de México · Zócalo",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.4326,
+      "lon": -99.1332,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "gj6lXqFzzbQ",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt-Dw91LyoqPH8",
+      "name": "Chapultepec · Ciudad de México",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.4204,
+      "lon": -99.1819,
+      "kind": "scenic",
+      "tags": [
+        "city",
+        "nature"
+      ],
+      "youtube": "Dw91LyoqPH8",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt--eoEzKqQQGw",
+      "name": "Guadalajara · La Minerva",
+      "country": "MX",
+      "region": "Jalisco",
+      "city": "Guadalajara",
+      "lat": 20.6739,
+      "lon": -103.392,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "-eoEzKqQQGw",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-xytHO8TgCBE",
+      "name": "Popocatépetl · Tlamacas",
+      "country": "MX",
+      "region": "Estado de México",
+      "city": "Amecameca",
+      "lat": 19.061,
+      "lon": -98.628,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "xytHO8TgCBE",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt--cn4sqd9ms4",
+      "name": "Tequisquiapan · Plaza Principal",
+      "country": "MX",
+      "region": "Querétaro",
+      "city": "Tequisquiapan",
+      "lat": 20.52,
+      "lon": -99.89,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "-cn4sqd9ms4",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-wyEi0OPai5g",
+      "name": "Copacabana · Posto 6",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Rio de Janeiro",
+      "lat": -22.9886,
+      "lon": -43.1914,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "wyEi0OPai5g",
+      "attribution": "Homes in Rio (YouTube)"
+    },
+    {
+      "native_id": "yt-WEl_I5vmuSs",
+      "name": "Copacabana · Posto 3",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Rio de Janeiro",
+      "lat": -22.977,
+      "lon": -43.186,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "WEl_I5vmuSs",
+      "attribution": "Homes in Rio (YouTube)"
+    },
+    {
+      "native_id": "yt-Bz9Hkrk1NcY",
+      "name": "Copacabana · Panorámica",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Rio de Janeiro",
+      "lat": -22.9711,
+      "lon": -43.1822,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "Bz9Hkrk1NcY",
+      "attribution": "Homes in Rio (YouTube)"
+    },
+    {
+      "native_id": "yt-00Tl3MSaodY",
+      "name": "Florianópolis · Praia dos Ingleses",
+      "country": "BR",
+      "region": "SC",
+      "city": "Florianópolis",
+      "lat": -27.437,
+      "lon": -48.392,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "00Tl3MSaodY",
+      "attribution": "Maaxcam Ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-MQDs8aq_Bu0",
+      "name": "Florianópolis · Lagoinha do Norte",
+      "country": "BR",
+      "region": "SC",
+      "city": "Florianópolis",
+      "lat": -27.4,
+      "lon": -48.43,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "MQDs8aq_Bu0",
+      "attribution": "Maaxcam Ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-41Lnv1Ws3fw",
+      "name": "Florianópolis · Barra da Lagoa",
+      "country": "BR",
+      "region": "SC",
+      "city": "Florianópolis",
+      "lat": -27.574,
+      "lon": -48.426,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "41Lnv1Ws3fw",
+      "attribution": "Barra da Lagoa Online (YouTube)"
+    },
+    {
+      "native_id": "yt-wUFev9VmbsY",
+      "name": "Santos · Praia",
+      "country": "BR",
+      "region": "SP",
+      "city": "Santos",
+      "lat": -23.968,
+      "lon": -46.329,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "wUFev9VmbsY",
+      "attribution": "Janelas TV (YouTube)"
+    },
+    {
+      "native_id": "yt-CkHrJQGVukI",
+      "name": "Santos · Orla",
+      "country": "BR",
+      "region": "SP",
+      "city": "Santos",
+      "lat": -23.98,
+      "lon": -46.33,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "CkHrJQGVukI",
+      "attribution": "Surfistafotografo (YouTube)"
+    },
+    {
+      "native_id": "yt-hUg4ZLxczi0",
+      "name": "Porto de Santos · Panorámica",
+      "country": "BR",
+      "region": "SP",
+      "city": "Santos",
+      "lat": -23.98,
+      "lon": -46.3,
+      "kind": "scenic",
+      "tags": [
+        "harbor"
+      ],
+      "youtube": "hUg4ZLxczi0",
+      "attribution": "Praticagem de São Paulo (YouTube)"
+    },
+    {
+      "native_id": "yt-my5M006YpT8",
+      "name": "Recife · Boa Viagem",
+      "country": "BR",
+      "region": "PE",
+      "city": "Recife",
+      "lat": -8.13,
+      "lon": -34.9,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "my5M006YpT8",
+      "attribution": "Edson IRL Brasil (YouTube)"
+    },
+    {
+      "native_id": "yt-jhIKYFLSJmY",
+      "name": "Natal · Ponta Negra",
+      "country": "BR",
+      "region": "RN",
+      "city": "Natal",
+      "lat": -5.88,
+      "lon": -35.175,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "jhIKYFLSJmY",
+      "attribution": "Live Cam Natal (YouTube)"
+    },
+    {
+      "native_id": "yt-fG0l53IN9kY",
+      "name": "Natal · Praia dos Artistas",
+      "country": "BR",
+      "region": "RN",
+      "city": "Natal",
+      "lat": -5.779,
+      "lon": -35.196,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "fG0l53IN9kY",
+      "attribution": "Live Cam Brasil (YouTube)"
+    },
+    {
+      "native_id": "yt-ky-qMVorSt0",
+      "name": "São Paulo · Centro",
+      "country": "BR",
+      "region": "SP",
+      "city": "São Paulo",
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "ky-qMVorSt0",
+      "attribution": "Geolan Tecnologia (YouTube)"
+    },
+    {
+      "native_id": "yt-NWFAck_pyVE",
+      "name": "Ubatuba · Praia Grande",
+      "country": "BR",
+      "region": "SP",
+      "city": "Ubatuba",
+      "lat": -23.46,
+      "lon": -45.065,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "NWFAck_pyVE",
+      "attribution": "UBACAM (YouTube)"
+    },
+    {
+      "native_id": "yt-CJGzm3qjFUk",
+      "name": "Ubatuba · Tenório",
+      "country": "BR",
+      "region": "SP",
+      "city": "Ubatuba",
+      "lat": -23.495,
+      "lon": -45.07,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "CJGzm3qjFUk",
+      "attribution": "UBACAM (YouTube)"
+    },
+    {
+      "native_id": "yt-v5Y6WsD577M",
+      "name": "Guarujá · Enseada",
+      "country": "BR",
+      "region": "SP",
+      "city": "Guarujá",
+      "lat": -23.99,
+      "lon": -46.26,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "v5Y6WsD577M",
+      "attribution": "Surfistafotografo (YouTube)"
+    },
+    {
+      "native_id": "yt-q5jrRV0Tc-Y",
+      "name": "Guarujá · Pitangueiras",
+      "country": "BR",
+      "region": "SP",
+      "city": "Guarujá",
+      "lat": -24,
+      "lon": -46.255,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "q5jrRV0Tc-Y",
+      "attribution": "Surfistafotografo (YouTube)"
+    },
+    {
+      "native_id": "yt-MJ00w0LIn1M",
+      "name": "Arraial do Cabo",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Arraial do Cabo",
+      "lat": -22.966,
+      "lon": -42.028,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "MJ00w0LIn1M",
+      "attribution": "Pontal NeTv (YouTube)"
+    },
+    {
+      "native_id": "yt-OF1fVzpXpNI",
+      "name": "Cabo Frio · Praia do Forte",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Cabo Frio",
+      "lat": -22.88,
+      "lon": -42.01,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "OF1fVzpXpNI",
+      "attribution": "Point do Forte (YouTube)"
+    },
+    {
+      "native_id": "yt-lFlovxrE9Og",
+      "name": "Balneário Camboriú · Laranjeiras",
+      "country": "BR",
+      "region": "SC",
+      "city": "Balneário Camboriú",
+      "lat": -26.97,
+      "lon": -48.62,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "lFlovxrE9Og",
+      "attribution": "ConexãoDCTV (YouTube)"
+    },
+    {
+      "native_id": "yt-pkHBcvRuyaA",
+      "name": "Balneário Camboriú · Av. Atlântica",
+      "country": "BR",
+      "region": "SC",
+      "city": "Balneário Camboriú",
+      "lat": -26.99,
+      "lon": -48.633,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "pkHBcvRuyaA",
+      "attribution": "CLIMA BC Brazil (YouTube)"
+    },
+    {
+      "native_id": "yt-I2VvSE0fyz4",
+      "name": "Necochea · Playa",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Necochea",
+      "lat": -38.5545,
+      "lon": -58.739,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "I2VvSE0fyz4",
+      "attribution": "Nahuel Valentini (YouTube)"
+    },
+    {
+      "native_id": "yt-FqgTC1hW2TE",
+      "name": "Necochea · Playa 4K",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Necochea",
+      "lat": -38.556,
+      "lon": -58.74,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "FqgTC1hW2TE",
+      "attribution": "Nahuel Valentini (YouTube)"
+    },
+    {
+      "native_id": "yt-AFdcsd4C_lc",
+      "name": "Mar del Sud · Playa",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Mar del Sud",
+      "lat": -38.33,
+      "lon": -57.99,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "AFdcsd4C_lc",
+      "attribution": "Mar Del Sud (YouTube)"
+    },
+    {
+      "native_id": "yt-oGzvdzMGYjU",
+      "name": "Pinamar · Playa",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Pinamar",
+      "lat": -37.1084,
+      "lon": -56.86,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "oGzvdzMGYjU",
+      "attribution": "Power Pinamar (YouTube)"
+    },
+    {
+      "native_id": "yt-xoyKM6BQceM",
+      "name": "Buenos Aires · Calle",
+      "country": "AR",
+      "region": "CABA",
+      "city": "Buenos Aires",
+      "lat": -34.6037,
+      "lon": -58.3816,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "xoyKM6BQceM",
+      "attribution": "Paseos y Turismo (YouTube)"
+    },
+    {
+      "native_id": "yt-RugYzs0uftE",
+      "name": "Costa y Patagonia argentina",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Villa Gesell",
+      "lat": -37.264,
+      "lon": -56.973,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "RugYzs0uftE",
+      "attribution": "Paseos y Turismo (YouTube)"
+    },
+    {
+      "native_id": "yt-8MhY4vTPzzk",
+      "name": "Patagonia · Bariloche",
+      "country": "AR",
+      "region": "Río Negro",
+      "city": "Bariloche",
+      "lat": -41.1335,
+      "lon": -71.3103,
+      "kind": "scenic",
+      "tags": [
+        "mountain",
+        "nature"
+      ],
+      "youtube": "8MhY4vTPzzk",
+      "attribution": "CLIMA BARILOCHE (YouTube)"
+    },
+    {
+      "native_id": "yt-J5TZxAkOyfQ",
+      "name": "Valparaíso · Las Torpederas",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Valparaíso",
+      "lat": -33.039,
+      "lon": -71.62,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "J5TZxAkOyfQ",
+      "attribution": "Marejadas UV (YouTube)"
+    },
+    {
+      "native_id": "yt-yEeIXw5ZK9M",
+      "name": "Viña del Mar · Acapulco",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Viña del Mar",
+      "lat": -33.01,
+      "lon": -71.55,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "yEeIXw5ZK9M",
+      "attribution": "Marejadas UV (YouTube)"
+    },
+    {
+      "native_id": "yt-p1BIG597ELc",
+      "name": "Viña del Mar · Av. Perú",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Viña del Mar",
+      "lat": -33.015,
+      "lon": -71.548,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "p1BIG597ELc",
+      "attribution": "Marejadas UV (YouTube)"
+    },
+    {
+      "native_id": "yt-F4QwT2JimHE",
+      "name": "Reñaca · Viña del Mar",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Reñaca",
+      "lat": -32.96,
+      "lon": -71.55,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "F4QwT2JimHE",
+      "attribution": "Marejadas UV (YouTube)"
+    },
+    {
+      "native_id": "yt-bgmR3W4eXic",
+      "name": "Santiago de Chile",
+      "country": "CL",
+      "region": "RM",
+      "city": "Santiago",
+      "lat": -33.4489,
+      "lon": -70.6693,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "bgmR3W4eXic",
+      "attribution": "SantiagoCam (YouTube)"
+    },
+    {
+      "native_id": "yt-RhdmP5017VM",
+      "name": "Concepción · Centro",
+      "country": "CL",
+      "region": "Biobío",
+      "city": "Concepción",
+      "lat": -36.827,
+      "lon": -73.05,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "RhdmP5017VM",
+      "attribution": "ConceCam (YouTube)"
+    },
+    {
+      "native_id": "yt-bzfCbXAjk4s",
+      "name": "Ciudad de Panamá",
+      "country": "PA",
+      "region": "Panamá",
+      "city": "Ciudad de Panamá",
+      "lat": 8.9824,
+      "lon": -79.5199,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "bzfCbXAjk4s",
+      "attribution": "Panama City Live Cam (YouTube)"
+    },
+    {
+      "native_id": "yt-mRRrJJlO0vg",
+      "name": "Volcán de Fuego",
+      "country": "GT",
+      "region": "Sacatepéquez",
+      "city": "Antigua Guatemala",
+      "lat": 14.473,
+      "lon": -90.88,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "mRRrJJlO0vg",
+      "attribution": "afarTV (YouTube)"
+    },
+    {
+      "native_id": "yt-hSOYBoPMltU",
+      "name": "Volcán de Fuego · Crelosa",
+      "country": "GT",
+      "region": "Escuintla",
+      "city": "Escuintla",
+      "lat": 14.473,
+      "lon": -90.88,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "hSOYBoPMltU",
+      "attribution": "Crelosa (YouTube)"
+    },
+    {
+      "native_id": "yt-EI7-Y1b65Pw",
+      "name": "Volcán Nevado del Ruiz",
+      "country": "CO",
+      "region": "Caldas",
+      "city": "Manizales",
+      "lat": 4.895,
+      "lon": -75.322,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "EI7-Y1b65Pw",
+      "attribution": "Servicio Geológico Colombiano (YouTube)"
+    },
+    {
+      "native_id": "yt-jRCUfPPNJPE",
+      "name": "Villa de Leyva · Plaza Mayor",
+      "country": "CO",
+      "region": "Boyacá",
+      "city": "Villa de Leyva",
+      "lat": 5.635,
+      "lon": -73.525,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "jRCUfPPNJPE",
+      "attribution": "Heli Dario Forero (YouTube)"
+    },
+    {
+      "native_id": "yt-Tldo8RNCT-0",
+      "name": "Ciudad del Este",
+      "country": "PY",
+      "region": "Alto Paraná",
+      "city": "Ciudad del Este",
+      "lat": -25.5097,
+      "lon": -54.6111,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "Tldo8RNCT-0",
+      "attribution": "Transmissão ao vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-oOsoFwMPbOg",
+      "name": "Zócalo · Panorámica",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.4326,
+      "lon": -99.1332,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "oOsoFwMPbOg",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt-Bvbll8YMKAY",
+      "name": "Palacio de Bellas Artes",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.4352,
+      "lon": -99.1412,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "Bvbll8YMKAY",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt-d8MjS53ncyw",
+      "name": "Puebla · Volcanes Popocatépetl e Iztaccíhuatl",
+      "country": "MX",
+      "region": "Puebla",
+      "city": "Puebla",
+      "lat": 19.0414,
+      "lon": -98.2063,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "d8MjS53ncyw",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-S2EdzALBofQ",
+      "name": "Popocatépetl 4K",
+      "country": "MX",
+      "region": "Puebla",
+      "city": "San Nicolás de los Ranchos",
+      "lat": 19.0233,
+      "lon": -98.6278,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "S2EdzALBofQ",
+      "attribution": "Live Cam Popocatépetl (YouTube)"
+    },
+    {
+      "native_id": "yt-xNfAyXAhAQI",
+      "name": "Tijuana · Panorámica",
+      "country": "MX",
+      "region": "Baja California",
+      "city": "Tijuana",
+      "lat": 32.5149,
+      "lon": -117.0382,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "xNfAyXAhAQI",
+      "attribution": "Los Recomendados (YouTube)"
+    },
+    {
+      "native_id": "yt-NaPmg3IcLu4",
+      "name": "Tijuana · Vista panorámica",
+      "country": "MX",
+      "region": "Baja California",
+      "city": "Tijuana",
+      "lat": 32.5027,
+      "lon": -117.0037,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "NaPmg3IcLu4",
+      "attribution": "WebcamsDeMexico Live (YouTube)"
+    },
+    {
+      "native_id": "yt-fQJRrJkDKo8",
+      "name": "Cancún · Grand Residences Riviera",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.1,
+      "lon": -86.77,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "fQJRrJkDKo8",
+      "attribution": "Royal Resorts (YouTube)"
+    },
+    {
+      "native_id": "yt-72Cy1h3u7qU",
+      "name": "Cancún · Zona Hotelera",
+      "country": "MX",
+      "region": "Quintana Roo",
+      "city": "Cancún",
+      "lat": 21.14,
+      "lon": -86.76,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "72Cy1h3u7qU",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-duccREgWTx4",
+      "name": "Puerto Vallarta · Grand Park Royal",
+      "country": "MX",
+      "region": "Jalisco",
+      "city": "Puerto Vallarta",
+      "lat": 20.64,
+      "lon": -105.23,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "duccREgWTx4",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-anmRfKwtPAc",
+      "name": "Cabo San Lucas · Médano Este",
+      "country": "MX",
+      "region": "Baja California Sur",
+      "city": "Cabo San Lucas",
+      "lat": 22.89,
+      "lon": -109.9,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "anmRfKwtPAc",
+      "attribution": "WebcamsDeMexico Live (YouTube)"
+    },
+    {
+      "native_id": "yt-N_myRz6mN1Q",
+      "name": "Acapulco · Playa El Morro",
+      "country": "MX",
+      "region": "Guerrero",
+      "city": "Acapulco",
+      "lat": 16.83,
+      "lon": -99.88,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "N_myRz6mN1Q",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-d-cwgfQfZN0",
+      "name": "Acapulco · Playa Barra Vieja",
+      "country": "MX",
+      "region": "Guerrero",
+      "city": "Acapulco",
+      "lat": 16.74,
+      "lon": -99.7,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "d-cwgfQfZN0",
+      "attribution": "Webcams Guerrero (YouTube)"
+    },
+    {
+      "native_id": "yt-37WdDtO7EAQ",
+      "name": "Oaxaca · Santo Domingo",
+      "country": "MX",
+      "region": "Oaxaca",
+      "city": "Oaxaca",
+      "lat": 17.0654,
+      "lon": -96.7236,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "37WdDtO7EAQ",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-S6dQoX1ZMJY",
+      "name": "Querétaro · Panorámica",
+      "country": "MX",
+      "region": "Querétaro",
+      "city": "Querétaro",
+      "lat": 20.5888,
+      "lon": -100.3899,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "S6dQoX1ZMJY",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-Qz67UX_7I94",
+      "name": "Querétaro · Plaza de Armas",
+      "country": "MX",
+      "region": "Querétaro",
+      "city": "Querétaro",
+      "lat": 20.5937,
+      "lon": -100.3919,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "Qz67UX_7I94",
+      "attribution": "Webcams de México TV (YouTube)"
+    },
+    {
+      "native_id": "yt-FdLEZse7jp0",
+      "name": "São Vicente · Praia do Itararé",
+      "country": "BR",
+      "region": "SP",
+      "city": "São Vicente",
+      "lat": -23.9677,
+      "lon": -46.3855,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "FdLEZse7jp0",
+      "attribution": "Tem Onda (YouTube)"
+    },
+    {
+      "native_id": "yt-sCmXpBwHvqY",
+      "name": "Praia de Calhetas · Pernambuco",
+      "country": "BR",
+      "region": "PE",
+      "city": "Cabo de Santo Agostinho",
+      "lat": -8.3,
+      "lon": -34.95,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "sCmXpBwHvqY",
+      "attribution": "TARTADRONE (YouTube)"
+    },
+    {
+      "native_id": "yt-F3z8p_bMynk",
+      "name": "Recife · Boa Viagem 2",
+      "country": "BR",
+      "region": "PE",
+      "city": "Recife",
+      "lat": -8.12,
+      "lon": -34.9,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "F3z8p_bMynk",
+      "attribution": "Edson IRL Brasil (YouTube)"
+    },
+    {
+      "native_id": "yt-S8ss9Z0nM84",
+      "name": "Curitiba · Cámara 360",
+      "country": "BR",
+      "region": "PR",
+      "city": "Curitiba",
+      "lat": -25.4284,
+      "lon": -49.2733,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "S8ss9Z0nM84",
+      "attribution": "Canal Curitiba (YouTube)"
+    },
+    {
+      "native_id": "yt-Q7VS4S-fNFI",
+      "name": "Porto Alegre · Lago Guaíba",
+      "country": "BR",
+      "region": "RS",
+      "city": "Porto Alegre",
+      "lat": -30.0346,
+      "lon": -51.2177,
+      "kind": "scenic",
+      "tags": [
+        "lake",
+        "city"
+      ],
+      "youtube": "Q7VS4S-fNFI",
+      "attribution": "Câmeras ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-sw6AR6lytms",
+      "name": "Porto Alegre · Pôr do Sol",
+      "country": "BR",
+      "region": "RS",
+      "city": "Porto Alegre",
+      "lat": -30.04,
+      "lon": -51.23,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "sw6AR6lytms",
+      "attribution": "Porto Alegre ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-YJ_gLO7z3W8",
+      "name": "Guaíba · Porto Alegre",
+      "country": "BR",
+      "region": "RS",
+      "city": "Porto Alegre",
+      "lat": -30.03,
+      "lon": -51.24,
+      "kind": "scenic",
+      "tags": [
+        "lake"
+      ],
+      "youtube": "YJ_gLO7z3W8",
+      "attribution": "Brasil Caramelo (YouTube)"
+    },
+    {
+      "native_id": "yt-xt5k4nWXOEc",
+      "name": "Manaus · Ponta Negra",
+      "country": "BR",
+      "region": "AM",
+      "city": "Manaus",
+      "lat": -3.0807,
+      "lon": -60.0875,
+      "kind": "scenic",
+      "tags": [
+        "city",
+        "nature"
+      ],
+      "youtube": "xt5k4nWXOEc",
+      "attribution": "AmzLive (YouTube)"
+    },
+    {
+      "native_id": "yt-RzuMa_pzqkk",
+      "name": "Manaus · Vieiralves",
+      "country": "BR",
+      "region": "AM",
+      "city": "Manaus",
+      "lat": -3.0889,
+      "lon": -60.0156,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "RzuMa_pzqkk",
+      "attribution": "AmzLive (YouTube)"
+    },
+    {
+      "native_id": "yt-8quWDK9i-v0",
+      "name": "Natal · Forte dos Reis Magos",
+      "country": "BR",
+      "region": "RN",
+      "city": "Natal",
+      "lat": -5.7612,
+      "lon": -35.1975,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "8quWDK9i-v0",
+      "attribution": "FVF Drone Lives (YouTube)"
+    },
+    {
+      "native_id": "yt-EsQ69hBL7CA",
+      "name": "Maceió · Jatiúca",
+      "country": "BR",
+      "region": "AL",
+      "city": "Maceió",
+      "lat": -9.6498,
+      "lon": -35.7089,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "EsQ69hBL7CA",
+      "attribution": "Rainha Surf Cam (YouTube)"
+    },
+    {
+      "native_id": "yt-aAYoeHSIeYI",
+      "name": "Florianópolis · Ponte Hercílio Luz",
+      "country": "BR",
+      "region": "SC",
+      "city": "Florianópolis",
+      "lat": -27.5949,
+      "lon": -48.5656,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "aAYoeHSIeYI",
+      "attribution": "Maaxcam Ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-cw2NOWIZTyM",
+      "name": "Goiânia · Panorámica",
+      "country": "BR",
+      "region": "GO",
+      "city": "Goiânia",
+      "lat": -16.6869,
+      "lon": -49.2648,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "cw2NOWIZTyM",
+      "attribution": "Goiânia ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-QoRcKpBBaiU",
+      "name": "Santos · Praia 4K",
+      "country": "BR",
+      "region": "SP",
+      "city": "Santos",
+      "lat": -23.9726,
+      "lon": -46.3331,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "QoRcKpBBaiU",
+      "attribution": "Olhar 013 (YouTube)"
+    },
+    {
+      "native_id": "yt-u8f9vXzqtRA",
+      "name": "Santos · Monte Serrat y Porto",
+      "country": "BR",
+      "region": "SP",
+      "city": "Santos",
+      "lat": -23.97,
+      "lon": -46.31,
+      "kind": "scenic",
+      "tags": [
+        "harbor"
+      ],
+      "youtube": "u8f9vXzqtRA",
+      "attribution": "Surfistafotografo (YouTube)"
+    },
+    {
+      "native_id": "yt-84R3TTTHVIc",
+      "name": "Angra dos Reis",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Angra dos Reis",
+      "lat": -23.0067,
+      "lon": -44.3181,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "84R3TTTHVIc",
+      "attribution": "UPTV (YouTube)"
+    },
+    {
+      "native_id": "yt-ZMcmtGYYg5E",
+      "name": "Balneário Camboriú · Av. Brasil",
+      "country": "BR",
+      "region": "SC",
+      "city": "Balneário Camboriú",
+      "lat": -26.99,
+      "lon": -48.635,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "ZMcmtGYYg5E",
+      "attribution": "CLIMA BC Brazil (YouTube)"
+    },
+    {
+      "native_id": "yt-4K8oA0cYkwQ",
+      "name": "Itajaí · Porto",
+      "country": "BR",
+      "region": "SC",
+      "city": "Itajaí",
+      "lat": -26.9078,
+      "lon": -48.6619,
+      "kind": "scenic",
+      "tags": [
+        "harbor"
+      ],
+      "youtube": "4K8oA0cYkwQ",
+      "attribution": "ConexãoDCTV (YouTube)"
+    },
+    {
+      "native_id": "yt-yHbiTryu8WI",
+      "name": "Itajaí · Praia Brava",
+      "country": "BR",
+      "region": "SC",
+      "city": "Itajaí",
+      "lat": -26.9,
+      "lon": -48.62,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "yHbiTryu8WI",
+      "attribution": "ConexãoDCTV (YouTube)"
+    },
+    {
+      "native_id": "yt-0tMTEejJwhc",
+      "name": "Gramado",
+      "country": "BR",
+      "region": "RS",
+      "city": "Gramado",
+      "lat": -29.3789,
+      "lon": -50.8742,
+      "kind": "scenic",
+      "tags": [
+        "city",
+        "mountain"
+      ],
+      "youtube": "0tMTEejJwhc",
+      "attribution": "Gramado TV (YouTube)"
+    },
+    {
+      "native_id": "yt-iVYlMw05kZo",
+      "name": "Porto de Galinhas",
+      "country": "BR",
+      "region": "PE",
+      "city": "Ipojuca",
+      "lat": -8.5057,
+      "lon": -35.0049,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "iVYlMw05kZo",
+      "attribution": "Transmissão ao Vivo (YouTube)"
+    },
+    {
+      "native_id": "yt-N_UQicZLqv8",
+      "name": "Praia Grande · Ocian",
+      "country": "BR",
+      "region": "SP",
+      "city": "Praia Grande",
+      "lat": -24,
+      "lon": -46.42,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "N_UQicZLqv8",
+      "attribution": "Guia Turístico (YouTube)"
+    },
+    {
+      "native_id": "yt-B9xo-JWGzFU",
+      "name": "Praia Grande · Tupi",
+      "country": "BR",
+      "region": "SP",
+      "city": "Praia Grande",
+      "lat": -24,
+      "lon": -46.43,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "B9xo-JWGzFU",
+      "attribution": "Guia Turístico (YouTube)"
+    },
+    {
+      "native_id": "yt-v8EHx_ixEKU",
+      "name": "Praia Grande · Boqueirão",
+      "country": "BR",
+      "region": "SP",
+      "city": "Praia Grande",
+      "lat": -24.01,
+      "lon": -46.41,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "v8EHx_ixEKU",
+      "attribution": "Guia Turístico (YouTube)"
+    },
+    {
+      "native_id": "yt-VxOAEa4yf_A",
+      "name": "Ubatuba · Prumirim",
+      "country": "BR",
+      "region": "SP",
+      "city": "Ubatuba",
+      "lat": -23.37,
+      "lon": -44.95,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "VxOAEa4yf_A",
+      "attribution": "UBACAM (YouTube)"
+    },
+    {
+      "native_id": "yt-AsWdrzZE9mk",
+      "name": "Ubatuba · Prumirim Esquerdo",
+      "country": "BR",
+      "region": "SP",
+      "city": "Ubatuba",
+      "lat": -23.37,
+      "lon": -44.96,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "AsWdrzZE9mk",
+      "attribution": "UBACAM (YouTube)"
+    },
+    {
+      "native_id": "yt-sgOwKdzZuKI",
+      "name": "Cerro Uritorco",
+      "country": "AR",
+      "region": "Córdoba",
+      "city": "Capilla del Monte",
+      "lat": -30.8667,
+      "lon": -64.5333,
+      "kind": "scenic",
+      "tags": [
+        "mountain",
+        "nature"
+      ],
+      "youtube": "sgOwKdzZuKI",
+      "attribution": "ALTOMISTERIO (YouTube)"
+    },
+    {
+      "native_id": "yt-RHLpJyHeQ5U",
+      "name": "Mar del Plata · Webcam",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Mar del Plata",
+      "lat": -38.0055,
+      "lon": -57.5426,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "RHLpJyHeQ5U",
+      "attribution": "Mar del Plata Webcam (YouTube)"
+    },
+    {
+      "native_id": "yt-FKu3uOfk3qY",
+      "name": "Ushuaia · Cámaras",
+      "country": "AR",
+      "region": "Tierra del Fuego",
+      "city": "Ushuaia",
+      "lat": -54.8019,
+      "lon": -68.303,
+      "kind": "scenic",
+      "tags": [
+        "city",
+        "mountain"
+      ],
+      "youtube": "FKu3uOfk3qY",
+      "attribution": "Tierra del Fuego (YouTube)"
+    },
+    {
+      "native_id": "yt-DmdokNGwzww",
+      "name": "Necochea y Quequén",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Necochea",
+      "lat": -38.5545,
+      "lon": -58.739,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "DmdokNGwzww",
+      "attribution": "Canal Tres Necochea (YouTube)"
+    },
+    {
+      "native_id": "yt-3mmO5G-41Ys",
+      "name": "El Calafate",
+      "country": "AR",
+      "region": "Santa Cruz",
+      "city": "El Calafate",
+      "lat": -50.3379,
+      "lon": -72.2648,
+      "kind": "scenic",
+      "tags": [
+        "mountain",
+        "nature"
+      ],
+      "youtube": "3mmO5G-41Ys",
+      "attribution": "Titin Calafate (YouTube)"
+    },
+    {
+      "native_id": "yt-AsPNlN60FCc",
+      "name": "Argentina · Cámaras en vivo",
+      "country": "AR",
+      "region": "Buenos Aires",
+      "city": "Buenos Aires",
+      "lat": -34.6037,
+      "lon": -58.3816,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "AsPNlN60FCc",
+      "attribution": "Argentina 247 (YouTube)"
+    },
+    {
+      "native_id": "yt-ljEJytr2AQ4",
+      "name": "Santiago · Costanera Center",
+      "country": "CL",
+      "region": "RM",
+      "city": "Santiago",
+      "lat": -33.4172,
+      "lon": -70.6066,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "ljEJytr2AQ4",
+      "attribution": "Ledrium (YouTube)"
+    },
+    {
+      "native_id": "yt-JHukF717n2Y",
+      "name": "Santiago · Canal San Carlos",
+      "country": "CL",
+      "region": "RM",
+      "city": "Santiago",
+      "lat": -33.4,
+      "lon": -70.55,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "JHukF717n2Y",
+      "attribution": "Ledrium (YouTube)"
+    },
+    {
+      "native_id": "yt-r93_Ggv4x5k",
+      "name": "Santiago · Los Leones",
+      "country": "CL",
+      "region": "RM",
+      "city": "Santiago",
+      "lat": -33.4228,
+      "lon": -70.6,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "r93_Ggv4x5k",
+      "attribution": "Ledrium (YouTube)"
+    },
+    {
+      "native_id": "yt-hTCgYPhgmY4",
+      "name": "Santiago · Tobalaba y Providencia",
+      "country": "CL",
+      "region": "RM",
+      "city": "Santiago",
+      "lat": -33.4244,
+      "lon": -70.6112,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "hTCgYPhgmY4",
+      "attribution": "Ledrium (YouTube)"
+    },
+    {
+      "native_id": "yt-1hAKovOzJoo",
+      "name": "Viña del Mar · Epicentro Cam",
+      "country": "CL",
+      "region": "Valparaíso",
+      "city": "Viña del Mar",
+      "lat": -33.0245,
+      "lon": -71.5518,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "1hAKovOzJoo",
+      "attribution": "Elepicentro (YouTube)"
+    },
+    {
+      "native_id": "yt-KJQn3tC34Fs",
+      "name": "La Serena · Faro",
+      "country": "CL",
+      "region": "Coquimbo",
+      "city": "La Serena",
+      "lat": -29.9078,
+      "lon": -71.2778,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "KJQn3tC34Fs",
+      "attribution": "La Serena Drone (YouTube)"
+    },
+    {
+      "native_id": "yt-qIDuHFD7iqY",
+      "name": "Lima · Miraflores",
+      "country": "PE",
+      "region": "Lima",
+      "city": "Lima",
+      "lat": -12.1219,
+      "lon": -77.0297,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "qIDuHFD7iqY",
+      "attribution": "Miraflores Lima (YouTube)"
+    },
+    {
+      "native_id": "yt-6vhj7lRYAkI",
+      "name": "Bogotá · Carrera 9",
+      "country": "CO",
+      "region": "Bogotá D.C.",
+      "city": "Bogotá",
+      "lat": 4.711,
+      "lon": -74.0721,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "6vhj7lRYAkI",
+      "attribution": "First Thel Va (YouTube)"
+    },
+    {
+      "native_id": "yt-obYSVVM7RB0",
+      "name": "Cartagena · Playa Chica",
+      "country": "CO",
+      "region": "Bolívar",
+      "city": "Cartagena",
+      "lat": 10.391,
+      "lon": -75.4794,
+      "kind": "scenic",
+      "tags": [
+        "beach"
+      ],
+      "youtube": "obYSVVM7RB0",
+      "attribution": "sanantonioimag (YouTube)"
+    },
+    {
+      "native_id": "yt-T0I6CDXOOxc",
+      "name": "Cartagena Live",
+      "country": "CO",
+      "region": "Bolívar",
+      "city": "Cartagena",
+      "lat": 10.4236,
+      "lon": -75.5493,
+      "kind": "scenic",
+      "tags": [
+        "beach",
+        "city"
+      ],
+      "youtube": "T0I6CDXOOxc",
+      "attribution": "Cartagena Live (YouTube)"
+    },
+    {
+      "native_id": "yt-irZN3wtk2tY",
+      "name": "San José · Costa Rica 4K",
+      "country": "CR",
+      "region": "San José",
+      "city": "San José",
+      "lat": 9.9281,
+      "lon": -84.0907,
+      "kind": "scenic",
+      "tags": [
+        "city"
+      ],
+      "youtube": "irZN3wtk2tY",
+      "attribution": "San Jose Costa Rica Live (YouTube)"
+    },
+    {
+      "native_id": "yt-cNW2nytVkfs",
+      "name": "Volcán de Fuego 4K",
+      "country": "GT",
+      "region": "Sacatepéquez",
+      "city": "Antigua Guatemala",
+      "lat": 14.473,
+      "lon": -90.88,
+      "kind": "scenic",
+      "tags": [
+        "volcano",
+        "mountain"
+      ],
+      "youtube": "cNW2nytVkfs",
+      "attribution": "afarTV (YouTube)"
     }
   ]
 }
