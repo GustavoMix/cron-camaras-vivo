@@ -55,8 +55,8 @@ class CurateConfig:
     include_pending: bool = False
     max_catalog: int = 300
     min_score: int = 55
-    per_country_cap: int = 40
-    per_source_cap: int = 120
+    per_country_cap: int = 100
+    per_source_cap: int = 400
     probe_budget_s: float = 480.0
     probe_concurrency: int = 12
     fetch_concurrency: int = 8

@@ -13,7 +13,7 @@ from .state import parse_iso, uptime
 
 _THEME = {
     "marine": 20, "beaches": 20, "mountains": 20, "nature": 20,
-    "cities": 16, "ports": 14, "landscapes": 14, "weather": 8,
+    "cities": 16, "landmarks": 18, "plazas": 16, "traffic": 14, "ports": 14, "landscapes": 14, "weather": 8,
 }
 
 

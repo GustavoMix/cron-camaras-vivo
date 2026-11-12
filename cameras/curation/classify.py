@@ -23,6 +23,9 @@ _RULES: tuple[tuple[str, frozenset[str]], ...] = (
         ),
     ),
     ("ports", frozenset({"harbor", "harbour", "port", "marina", "pier", "lighthouse"})),
+    ("landmarks", frozenset({"landmark", "monument", "landmarks"})),
+    ("plazas", frozenset({"plaza", "zocalo", "piazza"})),
+    ("traffic", frozenset({"traffic", "transito", "crossing", "causeway"})),
     ("cities", frozenset({"city", "skyline", "downtown", "square", "bridge", "tower", "plaza"})),
 )
 

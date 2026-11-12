@@ -533,7 +533,7 @@
       "lon": -99.1332,
       "kind": "scenic",
       "tags": [
-        "city"
+        "plaza"
       ],
       "youtube": "gj6lXqFzzbQ",
       "attribution": "webcamsdemexico (YouTube)"
@@ -595,7 +595,7 @@
       "lon": -99.89,
       "kind": "scenic",
       "tags": [
-        "city"
+        "plaza"
       ],
       "youtube": "-cn4sqd9ms4",
       "attribution": "Webcams de México TV (YouTube)"
@@ -1184,7 +1184,7 @@
       "lon": -73.525,
       "kind": "scenic",
       "tags": [
-        "city"
+        "plaza"
       ],
       "youtube": "jRCUfPPNJPE",
       "attribution": "Heli Dario Forero (YouTube)"
@@ -1199,7 +1199,7 @@
       "lon": -54.6111,
       "kind": "scenic",
       "tags": [
-        "city"
+        "traffic"
       ],
       "youtube": "Tldo8RNCT-0",
       "attribution": "Transmissão ao vivo (YouTube)"
@@ -1214,7 +1214,7 @@
       "lon": -99.1332,
       "kind": "scenic",
       "tags": [
-        "city"
+        "plaza"
       ],
       "youtube": "oOsoFwMPbOg",
       "attribution": "webcamsdemexico (YouTube)"
@@ -1426,7 +1426,7 @@
       "lon": -100.3919,
       "kind": "scenic",
       "tags": [
-        "city"
+        "plaza"
       ],
       "youtube": "Qz67UX_7I94",
       "attribution": "Webcams de México TV (YouTube)"
@@ -2098,6 +2098,501 @@
       ],
       "youtube": "cNW2nytVkfs",
       "attribution": "afarTV (YouTube)"
+    },
+    {
+      "native_id": "yt-5p_KGD4fJZs",
+      "name": "Casa Blanca · Washington D.C.",
+      "country": "US",
+      "region": "DC",
+      "city": "Washington",
+      "lat": 38.8977,
+      "lon": -77.0365,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "5p_KGD4fJZs",
+      "attribution": "earthTV (YouTube)"
+    },
+    {
+      "native_id": "yt-mG2gAWY_Guw",
+      "name": "Monumento a Washington",
+      "country": "US",
+      "region": "DC",
+      "city": "Washington",
+      "lat": 38.8895,
+      "lon": -77.0353,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "mG2gAWY_Guw",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-ZxCeWQ3Lcig",
+      "name": "Times Square · Norte 4K",
+      "country": "US",
+      "region": "NY",
+      "city": "Nueva York",
+      "lat": 40.758,
+      "lon": -73.9855,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "ZxCeWQ3Lcig",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-KHy_n-EMWY8",
+      "name": "Times Square · Crossroads",
+      "country": "US",
+      "region": "NY",
+      "city": "Nueva York",
+      "lat": 40.758,
+      "lon": -73.9855,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "KHy_n-EMWY8",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-o5Ie_LpZ9uk",
+      "name": "Estatua de la Libertad",
+      "country": "US",
+      "region": "NY",
+      "city": "Nueva York",
+      "lat": 40.6892,
+      "lon": -74.0445,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "o5Ie_LpZ9uk",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-VGnFLdQW39A",
+      "name": "Nueva York · Skyline y calles",
+      "country": "US",
+      "region": "NY",
+      "city": "Nueva York",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "VGnFLdQW39A",
+      "attribution": "FOX 5 New York (YouTube)"
+    },
+    {
+      "native_id": "yt-5C9oM7C2Q9k",
+      "name": "World Trade Center",
+      "country": "US",
+      "region": "NY",
+      "city": "Nueva York",
+      "lat": 40.7127,
+      "lon": -74.0134,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "5C9oM7C2Q9k",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-MQEu33EtfbI",
+      "name": "Golden Gate · San Francisco",
+      "country": "US",
+      "region": "CA",
+      "city": "San Francisco",
+      "lat": 37.8199,
+      "lon": -122.4783,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "MQEu33EtfbI",
+      "attribution": "PicturesqueFM (YouTube)"
+    },
+    {
+      "native_id": "yt-uoIfETBzuSU",
+      "name": "Golden Gate 4K · Atardecer",
+      "country": "US",
+      "region": "CA",
+      "city": "San Francisco",
+      "lat": 37.8199,
+      "lon": -122.4783,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "uoIfETBzuSU",
+      "attribution": "Golden Gate Bridge Live (YouTube)"
+    },
+    {
+      "native_id": "yt-7gBzLGlJnwk",
+      "name": "Cataratas del Niágara",
+      "country": "US",
+      "region": "NY",
+      "city": "Niágara",
+      "lat": 43.0962,
+      "lon": -79.0377,
+      "kind": "scenic",
+      "tags": [
+        "waterfall"
+      ],
+      "youtube": "7gBzLGlJnwk",
+      "attribution": "Niagara Falls Live (YouTube)"
+    },
+    {
+      "native_id": "yt-qx7gry390YA",
+      "name": "Cataratas del Niágara · EarthCam",
+      "country": "US",
+      "region": "NY",
+      "city": "Niágara",
+      "lat": 43.0828,
+      "lon": -79.0742,
+      "kind": "scenic",
+      "tags": [
+        "waterfall"
+      ],
+      "youtube": "qx7gry390YA",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-YkKGantlWH0",
+      "name": "París · Torre Eiffel",
+      "country": "FR",
+      "region": "Île-de-France",
+      "city": "París",
+      "lat": 48.8584,
+      "lon": 2.2945,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "YkKGantlWH0",
+      "attribution": "Paris Live (YouTube)"
+    },
+    {
+      "native_id": "yt-QI-PPEW2Bgc",
+      "name": "París · Eiffel y Montparnasse",
+      "country": "FR",
+      "region": "Île-de-France",
+      "city": "París",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "QI-PPEW2Bgc",
+      "attribution": "Paris75Webcam (YouTube)"
+    },
+    {
+      "native_id": "yt-MXmzsjABC-U",
+      "name": "Londres · London Bridge y Támesis",
+      "country": "GB",
+      "region": "Inglaterra",
+      "city": "Londres",
+      "lat": 51.5079,
+      "lon": -0.0877,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "MXmzsjABC-U",
+      "attribution": "Beach Life Cams (YouTube)"
+    },
+    {
+      "native_id": "yt-zMCea32gpmg",
+      "name": "Londres · Abbey Road",
+      "country": "GB",
+      "region": "Inglaterra",
+      "city": "Londres",
+      "lat": 51.532,
+      "lon": -0.1778,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "zMCea32gpmg",
+      "attribution": "EarthCam (YouTube)"
+    },
+    {
+      "native_id": "yt-dfVK7ld38Ys",
+      "name": "Tokio · Cruce de Shibuya",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6595,
+      "lon": 139.7005,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "dfVK7ld38Ys",
+      "attribution": "FNN (YouTube)"
+    },
+    {
+      "native_id": "yt-5B4LmH4JbnY",
+      "name": "Tokio · Shibuya Scramble",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6595,
+      "lon": 139.7005,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "5B4LmH4JbnY",
+      "attribution": "ANNnewsCH (YouTube)"
+    },
+    {
+      "native_id": "yt-GJhnjzX5xYI",
+      "name": "Tokio · Odaiba",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6252,
+      "lon": 139.7753,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "GJhnjzX5xYI",
+      "attribution": "Tokyo Views LIVE (YouTube)"
+    },
+    {
+      "native_id": "yt-VM18f-IIUTw",
+      "name": "Tokio · Shiodome",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6643,
+      "lon": 139.7627,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "VM18f-IIUTw",
+      "attribution": "Kyodo LiveCamera (YouTube)"
+    },
+    {
+      "native_id": "yt-5uZa3-RMFos",
+      "name": "Sídney · Bahía 4K",
+      "country": "AU",
+      "region": "NSW",
+      "city": "Sídney",
+      "lat": -33.8568,
+      "lon": 151.2153,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "5uZa3-RMFos",
+      "attribution": "WebcamSydney (YouTube)"
+    },
+    {
+      "native_id": "yt-jshwkG1ZpP8",
+      "name": "Sídney · Bahía panorámica",
+      "country": "AU",
+      "region": "NSW",
+      "city": "Sídney",
+      "lat": -33.8568,
+      "lon": 151.2153,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "jshwkG1ZpP8",
+      "attribution": "WebcamSydney (YouTube)"
+    },
+    {
+      "native_id": "yt-4mOLCQEC7LE",
+      "name": "Sídney · Puente y Ópera",
+      "country": "AU",
+      "region": "NSW",
+      "city": "Sídney",
+      "lat": -33.8568,
+      "lon": 151.2153,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "4mOLCQEC7LE",
+      "attribution": "Sydney Harbour Live (YouTube)"
+    },
+    {
+      "native_id": "yt-ouVlIHvEAsA",
+      "name": "Cristo Redentor · Corcovado",
+      "country": "BR",
+      "region": "RJ",
+      "city": "Rio de Janeiro",
+      "lat": -22.9519,
+      "lon": -43.2105,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "ouVlIHvEAsA",
+      "attribution": "Paineiras Corcovado (YouTube)"
+    },
+    {
+      "native_id": "yt-ZH3jB650mcI",
+      "name": "Ángel de la Independencia · Reforma",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.427,
+      "lon": -99.1677,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "ZH3jB650mcI",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt-3vpV2S3Y7UM",
+      "name": "Monumento a la Revolución",
+      "country": "MX",
+      "region": "CDMX",
+      "city": "Ciudad de México",
+      "lat": 19.4361,
+      "lon": -99.1546,
+      "kind": "scenic",
+      "tags": [
+        "landmark"
+      ],
+      "youtube": "3vpV2S3Y7UM",
+      "attribution": "webcamsdemexico (YouTube)"
+    },
+    {
+      "native_id": "yt-145NS0R_Pxk",
+      "name": "Vallenar · Plaza de Armas",
+      "country": "CL",
+      "region": "Atacama",
+      "city": "Vallenar",
+      "lat": -28.5754,
+      "lon": -70.7577,
+      "kind": "scenic",
+      "tags": [
+        "plaza"
+      ],
+      "youtube": "145NS0R_Pxk",
+      "attribution": "IMVall (YouTube)"
+    },
+    {
+      "native_id": "yt-ypI9rLrk0yE",
+      "name": "Huaraz · Plaza de Armas",
+      "country": "PE",
+      "region": "Áncash",
+      "city": "Huaraz",
+      "lat": -9.5277,
+      "lon": -77.5278,
+      "kind": "scenic",
+      "tags": [
+        "plaza"
+      ],
+      "youtube": "ypI9rLrk0yE",
+      "attribution": "webcamvibe (YouTube)"
+    },
+    {
+      "native_id": "yt-ASqGNET31VY",
+      "name": "Venecia · Plaza San Marcos",
+      "country": "IT",
+      "region": "Véneto",
+      "city": "Venecia",
+      "lat": 45.4337,
+      "lon": 12.3397,
+      "kind": "scenic",
+      "tags": [
+        "plaza"
+      ],
+      "youtube": "ASqGNET31VY",
+      "attribution": "I Love You Venice (YouTube)"
+    },
+    {
+      "native_id": "yt-IcvugJWPXz8",
+      "name": "Puente Internacional Paso del Norte",
+      "country": "MX",
+      "region": "Chihuahua",
+      "city": "Ciudad Juárez",
+      "lat": 31.7473,
+      "lon": -106.4519,
+      "kind": "scenic",
+      "tags": [
+        "traffic"
+      ],
+      "youtube": "IcvugJWPXz8",
+      "attribution": "Fideicomiso de Puentes (YouTube)"
+    },
+    {
+      "native_id": "yt-xp6BJKex-oE",
+      "name": "Natal · Tránsito 360",
+      "country": "BR",
+      "region": "RN",
+      "city": "Natal",
+      "lat": -5.7945,
+      "lon": -35.211,
+      "kind": "scenic",
+      "tags": [
+        "traffic"
+      ],
+      "youtube": "xp6BJKex-oE",
+      "attribution": "FVF Drone Lives (YouTube)"
+    },
+    {
+      "native_id": "yt-GkBMgHwSIV0",
+      "name": "Miami · MacArthur Causeway",
+      "country": "US",
+      "region": "FL",
+      "city": "Miami",
+      "lat": 25.7907,
+      "lon": -80.1583,
+      "kind": "scenic",
+      "tags": [
+        "traffic"
+      ],
+      "youtube": "GkBMgHwSIV0",
+      "attribution": "Ozolio Live (YouTube)"
+    },
+    {
+      "native_id": "yt-6dp-bvQ7RWo",
+      "name": "Tokio · Shinjuku Ogado",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6938,
+      "lon": 139.6975,
+      "kind": "scenic",
+      "tags": [
+        "traffic"
+      ],
+      "youtube": "6dp-bvQ7RWo",
+      "attribution": "Shinjuku Live (YouTube)"
+    },
+    {
+      "native_id": "yt-DjdUEyjx8GM",
+      "name": "Tokio · Kabukicho",
+      "country": "JP",
+      "region": "Tokio",
+      "city": "Tokio",
+      "lat": 35.6938,
+      "lon": 139.7036,
+      "kind": "scenic",
+      "tags": [
+        "traffic"
+      ],
+      "youtube": "DjdUEyjx8GM",
+      "attribution": "Kabukicho Live (YouTube)"
     }
   ]
 }
